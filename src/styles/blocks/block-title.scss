@@ -1,0 +1,30 @@
+.block-title {
+	font-size: 2.1875em;
+	padding: 20px 60px;
+	display: inline-block;
+	font-family: "Roboto", sans-serif;
+    font-weight: bold;
+	color: $gray;
+	position: relative;
+	text-transform: uppercase;
+	max-width: 500px;
+	text-align: center;
+	
+	&:after, &:before {
+		content: "";
+		display: block;
+        @include centered(y);
+		background: #cacbc8;
+		width: 22px;
+		height: 5px;
+		
+	}
+
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+}

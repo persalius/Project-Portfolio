@@ -1,0 +1,21 @@
+footer.footer
+    .footer__row.footer__row_top
+        .footer__left
+            ul.nav-menu
+                each link in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
+                    li.nav-menu__item
+                        a(href="#").nav-menu__link= link
+        .footer__right
+            ul.socials.socials_footer
+                li.socials__item
+                    a(href="#").socials__link.socials__link-fb
+                li.socials__item
+                    a(href="#").socials__link.socials__link-gt
+                li.socials__item
+                    a(href="#").socials__link.socials__link-in
+
+    .footer__row
+        .footer__left
+            .footer__about Я веб-разработчик из Днепропетровска, и этот сайт я сделал в рамках обучения.
+        .footer__right
+            .footer__about-user-name © Шевченко Сергей

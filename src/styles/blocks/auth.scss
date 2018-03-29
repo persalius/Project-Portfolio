@@ -1,0 +1,89 @@
+.auth-container {
+  background: url('../img/bg/auth.jpg') center center no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 10px;
+  width: 380px;
+    
+  .user {
+    position: static;
+    transform: initial;
+    .user__name {
+      color: $gray;
+    }
+  }
+    
+  .socials {
+    position: static;
+    text-align: center;
+  }
+}
+
+.auth .socials__link {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    border-radius: 50%;
+    display: block;
+
+    &-fb {
+       background: url("../img/icons/svg/fb.svg") no-repeat center center; 
+       background-size: 70%;
+    }
+    &-gt {
+       background: url("../img/icons/svg/github.svg") no-repeat center center; 
+       background-size: 60%;
+    }
+    &-in {
+       background: url("../img/icons/svg/in.svg") no-repeat; 
+       background-size: 60%;
+        background-position: 53% 40%;
+    }
+
+}
+
+.user__photo {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  background: url("../img/content/user.jpg") no-repeat center center;
+}
+
+.auth__info {
+  padding: 40px 70px;
+  background: rgba(#fcfcfc, .85);
+}
+
+.auth__btns {
+  display: flex;
+}
+
+.auth__btn {
+  background: $green;
+  font-size: 13px;
+  color: #fff;
+  padding: 17px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+  border: 1px solid #6fd1c6;
+  
+  &:last-child {
+    border-right: none;
+  }
+}

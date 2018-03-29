@@ -1,0 +1,50 @@
+.socials {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+	&_footer {
+		position: static;
+		display: inline-block;
+		padding-top: 20px;
+
+		.socials__link {
+			height: 36px;
+			width: 36px;
+			position: relative;
+			border-radius: 50%;
+			border: 1px solid rgba(#9a9d9f, .5);
+			display: block;
+            
+            &-fb {
+               background: url("../img/icons/svg/fb.svg") no-repeat center center; 
+               background-size: 70%;
+            }
+            &-gt {
+               background: url("../img/icons/svg/github.svg") no-repeat center center; 
+               background-size: 60%;
+            }
+            &-in {
+               background: url("../img/icons/svg/in.svg") no-repeat; 
+               background-size: 60%;
+                background-position: 53% 40%;
+            }
+
+		}
+	}
+}
+
+.socials__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 25px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.socials__icon {
+	width: 25px;
+	height: 35px;
+}

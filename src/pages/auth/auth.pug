@@ -1,0 +1,24 @@
+extends ../../main-layout
+
+block title
+    | Приветствие
+
+block content
+  .auth-container
+    .auth
+      .auth__info
+        .user
+          .user__photo
+          .user__name Шевченко Сергей
+        ul.socials
+            li.socials__item
+                a(href="#").socials__link.socials__link-fb
+            li.socials__item
+                a(href="#").socials__link.socials__link-gt
+            li.socials__item
+                a(href="#").socials__link.socials__link-in
+
+      .auth__btns
+        a(href="works.html").auth__btn Мои работы
+        a(href="index.html").auth__btn Обо мне
+        a(href="#").auth__btn Блог
