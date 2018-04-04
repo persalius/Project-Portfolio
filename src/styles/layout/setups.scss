@@ -1,3 +1,7 @@
+* {
+    transition: 0.3s all;
+}
+
 html {
   @include tablets {
     font-size: 14px;
@@ -12,7 +16,6 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 14px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
 }

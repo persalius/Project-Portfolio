@@ -1,23 +1,23 @@
 .skills-list {
-	margin-left: -35px;
+	margin-left: -1.8em;
 }
 
 .skills__title {
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 1.1em;
 }
 
 .skills-list__item {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 25px;
-	margin-bottom: 35px;
+	margin-left: 1.5625em;
+	margin-bottom: 1.1em;
 }
 
 .skills-group__title {
-	font-size: 28px;
+	font-size: 1.75em; //28px
 	color: $gray;
-	margin-bottom: 15px;
+	margin-bottom: 0.535em;
 	font-weight: 500;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .skills__text {
-	margin-bottom: 50px;
+	margin-bottom: 3.125em;
 
 	p {
 		color: $gray;

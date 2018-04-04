@@ -2,7 +2,9 @@
 $white: #efeee9;
 $beige: #eeebdf;
 $green: #10c1a8;
+$green_dark: #009688;
 $gray: #455a64;
+$black: #373e42;
 $light-beige: #f9f8f0;
 
 //mixins
@@ -29,3 +31,6 @@ $light-beige: #f9f8f0;
 @import "blocks/socials.scss";
 @import "blocks/user.scss";
 @import "blocks/works-head.scss";
+@import "blocks/down-arrow.scss";
+@import "blocks/hamburger.scss";
+@import "blocks/contacts.scss";

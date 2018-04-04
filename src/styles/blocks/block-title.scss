@@ -1,13 +1,17 @@
+.about__title {
+	text-align: center;
+}
+
 .block-title {
 	font-size: 2.1875em;
-	padding: 20px 60px;
+	padding: 1em 1.7em;
 	display: inline-block;
 	font-family: "Roboto", sans-serif;
     font-weight: bold;
 	color: $gray;
 	position: relative;
 	text-transform: uppercase;
-	max-width: 500px;
+	max-width: 70%;
 	text-align: center;
 	
 	&:after, &:before {
@@ -15,8 +19,8 @@
 		display: block;
         @include centered(y);
 		background: #cacbc8;
-		width: 22px;
-		height: 5px;
+		width: 0.63em;
+		height: 0.143em;
 		
 	}
 

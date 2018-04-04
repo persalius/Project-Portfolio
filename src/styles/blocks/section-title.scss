@@ -4,12 +4,11 @@
 	text-align: center;
 	padding: 45px 80px;
 	display: inline-block;
+    background: url("../img/decor/about_header.png") no-repeat;
 	background-size: contain;
-	background-position: center center;
-	background-repeat: no-repeat;
+    background-position: center 30%;
 	font-family: "Lobster", sans-serif;
 	position: relative;
-    background: url('../img/decor/works-header.png') no-repeat center center;
 
 	&:before, &:after {
 		content: "";

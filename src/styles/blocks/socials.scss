@@ -1,43 +1,95 @@
 .socials {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 1.25em;
+	left: 1.25em;
 
 	&_footer {
 		position: static;
 		display: inline-block;
-		padding-top: 20px;
+		padding-top: 1.25em;
 
 		.socials__link {
-			height: 36px;
-			width: 36px;
+			height: 2.25em;
+			width: 2.25em;
 			position: relative;
 			border-radius: 50%;
 			border: 1px solid rgba(#9a9d9f, .5);
 			display: block;
             
             &-fb {
-               background: url("../img/icons/svg/fb.svg") no-repeat center center; 
-               background-size: 70%;
+                background: url("../img/icons/svg/fb.svg") no-repeat center center; 
+                background-size: 30%;
+                
+                &:hover {
+                    border: none;
+                    background: url("../img/icons/svg/fb_round.svg") no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
             }
             &-gt {
-               background: url("../img/icons/svg/github.svg") no-repeat center center; 
-               background-size: 60%;
+                background: url("../img/icons/svg/github.svg") no-repeat center center; 
+                background-size: 60%;
+                
+                &:hover {
+                    border: none;
+                    background: url("../img/icons/svg/github_round.svg") no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
             }
             &-in {
                background: url("../img/icons/svg/in.svg") no-repeat; 
                background-size: 60%;
-                background-position: 53% 40%;
+               background-position: 53% 40%;
+                
+                &:hover {
+                    border: none;
+                    background: url("../img/icons/svg/in_round.svg") no-repeat;
+                    background-size: 100%;
+                    background-position: center center;
+                }
             }
 
 		}
 	}
+ 
+    &_hero {
+		display: inline-block;
+        top: 1.875em;
+	    left: 1.875em;
+        
+        .socials__link {
+			height: 2.25em;
+			width: 2.25em;
+			display: block;
+            opacity: 0.5;
+            
+            &:hover {
+                opacity: 1;
+            }
+            
+            &-fb {
+                background: url("../img/icons/svg/fb.svg") no-repeat center center; 
+                background-size: 30%;
+            }
+            &-gt {
+                background: url("../img/icons/svg/github.svg") no-repeat center center; 
+                background-size: 60%;
+            }
+            &-in {
+                background: url("../img/icons/svg/in.svg") no-repeat; 
+                background-size: 60%;
+                background-position: 53% 40%;
+            }
+
+		}
+    }
 }
 
 .socials__item {
 	display: inline-block;
-	vertical-align: middle;
-	margin-left: 25px;
+	margin-left: 1.5625em;
 
 	&:first-child {
 		margin-left: 0;
@@ -45,6 +97,6 @@
 }
 
 .socials__icon {
-	width: 25px;
-	height: 35px;
+	width: 1.5625em;
+	height: 2.1875em;
 }

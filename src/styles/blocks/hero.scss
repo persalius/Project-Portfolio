@@ -1,5 +1,5 @@
 .hero {
-	height: 600px;
+	height: 37.5em;
 	overflow: hidden;
 	position: relative;
 }
@@ -8,12 +8,16 @@
 	top: 0;
 	width: 100%;
 	@include centered(x);
-    background: url("../img/bg/portfolio.jpg") no-repeat;
-    height: 600px;
+    
+    img {
+        display: block;
+        max-width: 100%;
+    }
 }
 
 .hero__container {
 	@include centered(y);
+    position: relative;
 	width: 100%;
 }
 

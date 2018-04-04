@@ -384,10 +384,8 @@ p {
   margin-bottom: 30px; }
 
 .about__pic {
-  margin: 0 auto;
   margin-bottom: 35px;
-  text-align: center;
-  width: 50%; }
+  text-align: center; }
   .about__pic img {
     display: inline-block;
     max-width: 100%; }
@@ -454,8 +452,23 @@ p {
   .auth .socials {
     position: static;
     text-align: center; }
-    .auth .socials .socials__icon {
-      fill: #10c1a8 !important; }
+
+.auth .socials__link {
+  height: 36px;
+  width: 36px;
+  position: relative;
+  border-radius: 50%;
+  display: block; }
+  .auth .socials__link-fb {
+    background: url(../img/fb.svg) no-repeat center center;
+    background-size: 70%; }
+  .auth .socials__link-gt {
+    background: url(../img/github.svg) no-repeat center center;
+    background-size: 60%; }
+  .auth .socials__link-in {
+    background: url(../img/in.svg) no-repeat;
+    background-size: 60%;
+    background-position: 53% 40%; }
 
 .user__photo {
   display: inline-block;
@@ -490,7 +503,7 @@ p {
 
 .block-title {
   font-size: 2.1875em;
-  padding: 45px 60px;
+  padding: 20px 60px;
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -563,11 +576,16 @@ p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%); }
+  .hero__bg img {
+    display: block;
+    max-width: 100%;
+    max-height: 1270px; }
 
 .hero__container {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  position: relative;
   width: 100%; }
 
 .hero-title-pic {
@@ -597,9 +615,19 @@ p {
   font-weight: 500; }
 
 .reviews {
-  height: 700px;
+  min-height: 700px;
   background: url(../img/reviews.jpg) center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+
+.reiews__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 300px;
+  background: #fff; }
 
 .section-title {
   font-size: 63px;
@@ -795,11 +823,16 @@ p {
       border-radius: 50%;
       border: 1px solid rgba(154, 157, 159, 0.5);
       display: block; }
-      .socials_footer .socials__link .socials__icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
+      .socials_footer .socials__link-fb {
+        background: url(../img/fb.svg) no-repeat center center;
+        background-size: 70%; }
+      .socials_footer .socials__link-gt {
+        background: url(../img/github.svg) no-repeat center center;
+        background-size: 60%; }
+      .socials_footer .socials__link-in {
+        background: url(../img/in.svg) no-repeat;
+        background-size: 60%;
+        background-position: 53% 40%; }
 
 .socials__item {
   display: inline-block;

@@ -1,0 +1,5 @@
+.down-arrow {
+    bottom: 40px;
+    z-index: 100;
+    @include centered(x);
+}

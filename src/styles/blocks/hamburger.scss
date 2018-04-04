@@ -1,0 +1,16 @@
+.hamburger {
+    position: absolute;
+    top: 1.875em;
+    right: 1.875em;
+    display: block;
+    width: 2em;
+    opacity: 0.5;
+    
+    img {
+        max-width: 100%;
+    }
+    
+    &:hover {
+        opacity: 1;
+    }
+}

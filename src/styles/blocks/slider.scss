@@ -37,7 +37,6 @@
 	left: 100%;
 	z-index: 10;
 	height: 70%;
-    background: url("../img/content/1.png") no-repeat center center;
 
 	@include tablets {
 		position: static;
@@ -104,5 +103,17 @@
 	&_right {
 		background: url('../img/btns/down.jpg') center center no-repeat;
 		background-size: cover;
+	}
+}
+
+.slider__display-pic {
+	@include centered();
+	max-width: 100%;
+	display: block;
+
+	@include tablets {
+		display: inline-block;
+		position: static;
+		transform: none;
 	}
 }

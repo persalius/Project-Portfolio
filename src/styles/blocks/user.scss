@@ -10,17 +10,22 @@
 	margin-bottom: 25px;
 	overflow: hidden;
 	display: inline-block;
-    background: url("../img/content/user.jpg") no-repeat;
+}
+
+.user__pic {
+	display: block;
+	max-width: 100%;
 }
 
 .user__name {
-	margin-bottom: 10px;
+	margin-bottom: 0.3em;
 	color: #ffffff;
-	font-size: 35px;
+	font-size: 2.1875em;
 }
 
 .user__desc {
 	font-weight: 100;
 	color: #ffffff;
 }
+
 
