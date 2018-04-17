@@ -9,7 +9,7 @@
 	position: absolute;
 	bottom: 100%;
 	width: 50%;
-	height: 110px;
+	height: 9.43em;
 }
 
 .works-head__triangle_left {
@@ -18,4 +18,29 @@
 
 .works-head__triangle_right {
 	right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .works-head__triangle {
+        height: 6.3125em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .works-head__triangle {
+        height: 4.125em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .works-head__triangle {
+        height: 1.625em;
+    }
+    
+    .works-head {
+        .section-title {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }

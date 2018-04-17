@@ -1,0 +1,141 @@
+.blur__form-wrapper {
+    @include centered();
+    width: 380px;
+    height: 437px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blur__from {
+    width: 100%;
+    height: 100%;
+    background: url("../img/content/reviews.jpg") center no-repeat;
+    filter: blur(20px);
+}
+
+//===========FORM==================
+.reiews__form {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
+    .section-title {
+        width: 100%;
+        background: none;
+        margin: 0;
+        padding: 0.7em 0;
+        text-align: center;
+        font-size: 2.1em;
+        color: #455a64;
+
+        &:after {
+            display: none;
+        }
+        
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.contact__form {
+}
+
+.contact__form-field {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    
+    input, textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 1em 1.25em;
+        margin-bottom: 1.25em;
+        border-radius: 5px;
+    }
+    
+    textarea {
+        height: 8.75em;
+        resize: none;
+    }
+    
+    ::-webkit-input-placeholder {color:#beb6b1;}
+    ::-moz-placeholder          {color:#beb6b1;}
+    :-moz-placeholder           {color:#beb6b1;}
+    :-ms-input-placeholder      {color:#beb6b1;}
+}
+
+.contact__form-buttons {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+    input {
+        flex: 1;
+        font-weight: 500;
+        border: none;
+        color: #fff;
+        padding: 0.8125em 0;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .submit {
+        background: #26bbaa;
+    }
+    
+    .reset {
+        background: #268c8c;
+    }
+}
+
+//============MEDIA============
+
+
+@media screen and (max-width: 768px) {
+    .reiews__form {
+        
+        .section-title {
+            width: 100%;
+        }
+    }
+    
+    .contact__form-buttons {
+    
+        input {
+            font-size: 1.2em;
+        }
+    }
+    
+    .blur__form-wrapper {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .blur__form-wrapper {
+        width: 95%;
+    }
+    
+    .reiews__form {
+        border-radius: 5px;
+
+        .section-title {
+           font-size: 2.3em;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+

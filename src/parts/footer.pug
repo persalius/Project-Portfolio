@@ -2,9 +2,14 @@ footer.footer
     .footer__row.footer__row_top
         .footer__left
             ul.nav-menu
-                each link in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
-                    li.nav-menu__item
-                        a(href="#").nav-menu__link= link
+                li.nav-menu__item
+                    a(href="works.html").nav-menu__link Мои работы
+                li.nav-menu__item
+                    a(href="about.html").nav-menu__link Обо мне
+                li.nav-menu__item
+                    a(href="#").nav-menu__link Блог
+                li.nav-menu__item
+                    a(href="index.html").nav-menu__link Авторизация
         .footer__right
             ul.socials.socials_footer
                 li.socials__item

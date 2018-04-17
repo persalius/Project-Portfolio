@@ -1,7 +1,34 @@
 .about {
 	@extend %clearfix;
 	position: relative;
+    display: flex;
 }
+
+//========TRIANGLE========
+.about-head {
+	position: relative;
+	background: $light-beige;
+	text-align: center;
+}
+
+.about-head__triangle {
+	fill: $light-beige;
+	position: absolute;
+	bottom: 100%;
+	width: 50%;
+	height: 9.43em;
+}
+
+.about-head__triangle_left {
+	left: 0;
+    fill: $white;
+}
+
+.about-head__triangle_right {
+	right: 0;
+    fill: $beige;
+}
+//========end TRIANGLE========
 
 .about__pic {
 	margin-bottom: 1.185em;
@@ -18,33 +45,22 @@
 }
 
 .about__col {
-	float: left;
-	width: 50%;
 	position: relative;
+    flex: 1;
 
 	&_left {
 		background: $white;
-
-		.about__triangle {
-			left: 0;
-			fill: $white;
-		}
 	}
 
 	&_right {
 		background: $beige;
-
-		.about__triangle {
-			right: 0;
-			fill: $beige;
-		}
 	}
 }
 
 .about__triangle {
 	display: block;
 	width: 100%;
-	height: 6.875em;
+	height: 9.43em;
 	position: absolute;
 	bottom: 100%;
 }
@@ -60,3 +76,57 @@
 		margin-bottom: 1.25em;
 	}
 }
+
+@media screen and (max-width: 1200px) {
+    .about-head__triangle {
+        height: 6.3125em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        flex-flow: column wrap;
+    }
+    
+    .about-head__triangle {
+        height: 4.125em;
+    }
+    
+    .about-head__triangle_right {
+        fill: $white;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-head__triangle {
+        height: 1.625em;
+    }
+    
+    .about__col-content {
+        padding: 0;
+    }
+    
+    .about__pic {
+        margin-bottom: 0;
+    }
+    
+    .block-text {
+        padding: 0 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

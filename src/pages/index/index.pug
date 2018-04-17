@@ -1,52 +1,29 @@
 extends ../../main-layout
 
 block title
-    | Главная Страница
+    | Приветствие
 
 block content
-    .wrapper
-        include ../../parts/hero
+  .auth-container
+    .bg
+    .authorization Авторизоваться
+    .copy © Шевченко Сергей
+    .auth
+      .auth__info
+        .user
+          .user__photo
+            img(src=require("../../img/content/user.jpg"), alt="").user__avatar
+          .user__name Шевченко Сергей
+          .user__desc Личный сайт разработчика
+        ul.socials
+            li.socials__item
+                a(href="#").socials__link.socials__link-fb
+            li.socials__item
+                a(href="#").socials__link.socials__link-gt
+            li.socials__item
+                a(href="#").socials__link.socials__link-in
 
-        section.section.about
-            .about__col.about__col_left
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,0 0,110 1000, 110")
-                .about__col-content
-                    .about__col-title
-                        .section-title
-                            | Обо мне
-                    .about
-                        .about__pic
-                            img(src=require("../../img/content/about.jpg") alt="").about__pic-img
-                        .about__title
-                            .block-title Кто я
-                        .block-text
-                            p Я веб разработчик из Днепропетровска. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                            p Этот сайт я сделал в рамках обучения. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
-
-            .about__col.about__col_right
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,110 1000,110 1000,0")
-                .about__col-content
-                    .skills
-                        .skills__title
-                            .block-title Чем я могу быть вам полезен
-                        .skills__text
-                            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                        ul.skills-group
-                            - var skills = [{"Frondend": ["JavaScript", "jQuery", "HTML", "CSS", "SCSS", "PUG"]},{"Backend": ["node.js", "Mongo.db"]}, {"WorkFlow": ["Webpack", "Git"]}]
-                            each skill in skills
-                                each skillsArray, skillName in skill
-                                    li.skills-group__item
-                                        .skill-section
-                                            .skills-group__title= skillName
-                                            ul.skills-list
-                                                each skillTitle in skillsArray
-                                                    li.skills-list__item
-                                                        .skill
-                                                            svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
-                                                                circle(cx="50" cy="50" r="40").skills__circle-under
-                                                                circle(cx="50" cy="50" r="40").skills__circle-above
-                                                            .skill__title= skillTitle
-        include ../../parts/map
-        include ../../parts/footer
+      .auth__btns
+        a(href="works.html").auth__btn Мои работы
+        a(href="about.html").auth__btn Обо мне
+        a(href="#").auth__btn Блог

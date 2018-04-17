@@ -32,3 +32,13 @@
 		right: 0;
 	}
 }
+
+@media screen and (max-width: 480px) {
+    .block-title {
+        max-width: 100%;
+        
+        &:before, &:after {
+            display: none;
+	    }
+    }
+}

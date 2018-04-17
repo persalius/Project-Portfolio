@@ -100,3 +100,12 @@
 	width: 1.5625em;
 	height: 2.1875em;
 }
+
+@media screen and (max-width: 870px) {
+    .socials {
+	
+        &_footer {
+            padding: 1.2em 0;
+        }
+    }
+}

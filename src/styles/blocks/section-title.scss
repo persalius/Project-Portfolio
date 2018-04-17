@@ -1,8 +1,8 @@
 .section-title {
-	font-size: 63px;
+	font-size: 3.9em;
 	color: #373e42;
 	text-align: center;
-	padding: 45px 80px;
+	padding: 0.7em 1.25em;
 	display: inline-block;
     background: url("../img/decor/about_header.png") no-repeat;
 	background-size: contain;
@@ -19,7 +19,7 @@
 		background: #c9c9c6;
 	}
 
-	$dash-margin: 40px;
+	$dash-margin: 0.6em;
 
 	&:before {
 		left: $dash-margin;

@@ -2,4 +2,9 @@
     bottom: 40px;
     z-index: 100;
     @include centered(x);
+    opacity: 0.5;
+    
+    &:hover {
+        opacity: 0.7;
+    }
 }

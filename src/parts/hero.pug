@@ -1,16 +1,16 @@
-section.section.hero
+section(class="section hero" id="hero")
     .hero__bg
         img(src=require("../img/bg/portfolio.jpg") alt="").hero__bg-img
 
-    .hero
-    __container
+    .hero__container
         img(src=require("../img/decor/portfolio-header.png") alt="").hero-title-pic
 
     .user
-        .user__pic-container
-            img(src=require("../img/content/user.jpg") alt="").user__pic
-        .user__name Шевченко Сергей
-        .user__desc Личный сайт разработчика
+        .user__hero-info
+            .user__pic-container
+                img(src=require("../img/content/user.jpg") alt="").user__pic
+            .user__name Шевченко Сергей
+            .user__desc Личный сайт разработчика
     
     ul.socials.socials_hero
         li.socials__item
@@ -21,7 +21,7 @@ section.section.hero
             a(href="#").socials__link.socials__link-in
     
     a(href="#").hamburger
-        img(src=require("../img/icons/svg/hamburger.svg"), alt="hamburger").hamburger__icon
+        img(src=require("../img/icons/svg/hamburger2.svg"), alt="hamburger").hamburger__icon
 
     a(href="#").down-arrow
         img(src=require("../img/icons/svg/arrow_down.svg"), alt="arrow_down").down-arrow__icon

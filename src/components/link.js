@@ -1,8 +1,9 @@
-export default (function() {    
+export default (function() {
+    
+    //all link add target
     document.querySelectorAll("a.socials__link").forEach(element => element.setAttribute("target", "_blank"));
     
-    
-    
+    //social links
     document.querySelectorAll(".socials__link-fb").forEach(element => element.setAttribute("href", "https://www.facebook.com/sergey.shevchenko.9210?ref=bookmarks"));
     
     document.querySelectorAll(".socials__link-gt").forEach(element => element.setAttribute("href", "https://github.com/persalius"));

@@ -36,3 +36,24 @@
 		color: $gray;
 	}
 }
+
+@media screen and (max-width: 768px) {
+    .skills-group {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills {
+        padding: 0 5%;
+    }
+    
+    .skills__title {
+        margin-bottom: 0;
+        
+        .block-title {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
