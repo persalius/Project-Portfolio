@@ -10,31 +10,37 @@
   <link href="./css/common.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
-<section class="section hero">
+<section class="section hero" id="hero">
   <div class="hero__bg"><img class="hero__bg-img" src="img/portfolio.jpg" alt=""></div>
-  <div class="hero"></div>
-  <__container><img class="hero-title-pic" src="img/portfolio-header.png" alt=""></__container>
+  <div class="hero__container"><img class="hero-title-pic" src="img/portfolio-header.png" alt=""></div>
   <div class="user">
-    <div class="user__pic-container"><img class="user__pic" src="img/user.jpg" alt=""></div>
-    <div class="user__name">Шевченко Сергей</div>
-    <div class="user__desc">Личный сайт разработчика</div>
+    <div class="user__hero-info">
+      <div class="user__pic-container"><img class="user__pic" src="img/user.jpg" alt=""></div>
+      <div class="user__name">Шевченко Сергей</div>
+      <div class="user__desc">Личный сайт разработчика</div>
+    </div>
   </div>
   <ul class="socials socials_hero">
     <li class="socials__item"><a class="socials__link socials__link-fb" href="#"></a></li>
     <li class="socials__item"><a class="socials__link socials__link-gt" href="#"></a></li>
     <li class="socials__item"><a class="socials__link socials__link-in" href="#"></a></li>
-  </ul><a class="hamburger" href="#"><img class="hamburger__icon" src="img/hamburger.svg" alt="hamburger"></a><a class="down-arrow" href="#"><img class="down-arrow__icon" src="img/arrow_down.svg" alt="arrow_down"></a>
+  </ul><a class="hamburger" href="#"><img class="hamburger__icon" src="img/hamburger2.svg" alt="hamburger"></a><a class="down-arrow" href="#"><img class="down-arrow__icon" src="img/arrow_down.svg" alt="arrow_down"></a>
 </section>
+      <section class="about-head">
+        <svg class="about-head__triangle about-head__triangle_left" viewbox="0 0 1000 110" preserveAspectRatio="none">
+          <polygon points="0,0 0,110 1000, 110"></polygon>
+        </svg>
+        <svg class="about-head__triangle about-head__triangle_right" viewbox="0 0 1000 110" preserveAspectRatio="none">
+          <polygon points="0,110 1000,110 1000,0"></polygon>
+        </svg>
+      </section>
       <section class="section about">
         <div class="about__col about__col_left">
-          <svg class="about__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
-            <polygon points="0,0 0,110 1000, 110"></polygon>
-          </svg>
-          <div class="about__col-content">
+          <div class="about__col-content" id="about__col-content">
             <div class="about__col-title">
               <div class="section-title">Обо мне</div>
             </div>
-            <div class="about">
+            <div class="about__info">
               <div class="about__pic"><img class="about__pic-img" src="img/about.jpg" alt=""></div>
               <div class="about__title">
                 <div class="block-title">Кто я</div>
@@ -47,9 +53,6 @@
           </div>
         </div>
         <div class="about__col about__col_right">
-          <svg class="about__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
-            <polygon points="0,110 1000,110 1000,0"></polygon>
-          </svg>
           <div class="about__col-content">
             <div class="skills">
               <div class="skills__title">
@@ -170,6 +173,31 @@
                     </ul>
                   </div>
                 </li>
+                <li class="skills-group__item">
+                  <div class="skill-section">
+                    <div class="skills-group__title">Design</div>
+                    <ul class="skills-list">
+                      <li class="skills-list__item">
+                        <div class="skill">
+                          <svg class="skill__circle" viewbox="0 0 100 100" preserveAspectRatio="none">
+                            <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
+                            <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                          </svg>
+                          <div class="skill__title">Illustrator</div>
+                        </div>
+                      </li>
+                      <li class="skills-list__item">
+                        <div class="skill">
+                          <svg class="skill__circle" viewbox="0 0 100 100" preserveAspectRatio="none">
+                            <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
+                            <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                          </svg>
+                          <div class="skill__title">Photoshop</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -187,10 +215,10 @@
   <div class="footer__row footer__row_top">
     <div class="footer__left">
       <ul class="nav-menu">
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Мои работы</a></li>
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Обо мне</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="works.html">Мои работы</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="about.html">Обо мне</a></li>
         <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#">Авторизация</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Авторизация</a></li>
       </ul>
     </div>
     <div class="footer__right">
@@ -211,5 +239,5 @@
   </div>
 </footer>
     </div>
-  <script type="text/javascript" src="js/common.js"></script></body>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/about.js"></script></body>
 </html>
