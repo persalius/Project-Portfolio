@@ -1,6 +1,18 @@
 .map {
-	height: 43.75em;
+	height: 66.875em;
 	background: url('../img/content/reviews.jpg') center center no-repeat;
 	background-size: cover;
     position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .map {
+        height: 53.75em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map {
+        height: 40em;
+    }
 }

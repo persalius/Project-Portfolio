@@ -1,9 +1,8 @@
 .contacts {
     width: 380px;
     background: rgba(#fcfcfc, .85);
-    border-radius: 5px;
-    @include centered("x");
-    top: 20%;
+    border-radius: 10px;
+    @include centered();
     padding: 3em 2.375em 2.8em 2.1875em;
     
     .block-title {
@@ -31,7 +30,9 @@
 .contacts__data {
     color: $gray;
     font-weight: 500;
-    padding: 0.78em 0 0.78em 2.125em;
+    padding: 0.78em 0 0.78em 3.125em; //right 2.125em
+    width: 11.25em;
+    margin-left: 3em;
     
     &-skype {
         background: url("../img/icons/svg/skype_green.svg") no-repeat;
@@ -48,3 +49,31 @@
         background-position: 0 center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        top: 40%;
+    }
+    
+    .contacts__data {
+        margin-left: 5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contacts {
+        width: 100%;
+        border-radius: 0;
+        top: 20%;
+        padding: 0;
+        background: rgba(#fcfcfc, .5);
+    }
+}
+
+
+
+
+
+
+
+
