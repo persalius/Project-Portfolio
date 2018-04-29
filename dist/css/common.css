@@ -727,10 +727,18 @@ img {
     width: 220%; } }
 
 .map {
-  height: 43.75em;
+  height: 66.875em;
   background: url(../img/reviews.jpg) center center no-repeat;
   background-size: cover;
   position: relative; }
+
+@media screen and (max-width: 768px) {
+  .map {
+    height: 53.75em; } }
+
+@media screen and (max-width: 480px) {
+  .map {
+    height: 40em; } }
 
 .nav-menu {
   padding: 1.875em 0; }
@@ -1203,11 +1211,11 @@ img {
 .contacts {
   width: 380px;
   background: rgba(252, 252, 252, 0.85);
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  top: 20%;
+  transform: translate(-50%, -50%);
   padding: 3em 2.375em 2.8em 2.1875em; }
   .contacts .block-title {
     color: #455a64;
@@ -1228,7 +1236,9 @@ img {
 .contacts__data {
   color: #455a64;
   font-weight: 500;
-  padding: 0.78em 0 0.78em 2.125em; }
+  padding: 0.78em 0 0.78em 3.125em;
+  width: 11.25em;
+  margin-left: 3em; }
   .contacts__data-skype {
     background: url(../img/skype_green.svg) no-repeat;
     background-position: 0 center; }
@@ -1238,6 +1248,20 @@ img {
   .contacts__data-tel {
     background: url(../img/phone_green.svg) no-repeat;
     background-position: 0 center; }
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    top: 40%; }
+  .contacts__data {
+    margin-left: 5em; } }
+
+@media screen and (max-width: 480px) {
+  .contacts {
+    width: 100%;
+    border-radius: 0;
+    top: 20%;
+    padding: 0;
+    background: rgba(252, 252, 252, 0.5); } }
 
 .blur__form-wrapper {
   position: absolute;
@@ -1331,3 +1355,58 @@ img {
     .reiews__form .section-title {
       font-size: 2.3em;
       width: 100%; } }
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #00bfa5; }
+
+.preloader_spinner {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.preloader__percents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; }
+
+.preloader__animation {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation: spin 2s linear infinite; }
+  .preloader__animation, .preloader__animation:before, .preloader__animation:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%; }
+  .preloader__animation:before {
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    bottom: 13px;
+    animation: spin 1.5s linear infinite; }
+  .preloader__animation:after {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    animation: spin 3s linear infinite; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
