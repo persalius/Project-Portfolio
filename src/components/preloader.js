@@ -56,9 +56,11 @@ export default (function() {
         }
       }
     }());
-
     
-    $(function() {
-       preloader.init(); 
-    });
+    setTimeout(function(){
+        preloader.init(); 
+    }, 1000);
+//    $(function() {
+//       preloader.init(); 
+//    });
 })();
