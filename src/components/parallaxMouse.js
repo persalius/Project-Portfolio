@@ -3,7 +3,7 @@ export default (function() {
     var lFollowY = 0;
     var x = 0;
     var y = 0;
-    var friction = 1 / 30;
+    var friction = 1 / 8; // скорость параллакса (изначально 1/30)
 
     function moveBackground() {
         x += (lFollowX - x) * friction;

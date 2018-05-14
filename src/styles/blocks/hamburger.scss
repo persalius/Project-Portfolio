@@ -1,16 +1,146 @@
-.hamburger {
+.humburger {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.humburger__menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+//    background: rgba($green, 0.95);
+    text-align: center;
+    height: 100vh;
+}
+
+.humburger__menu-item {
+    margin: 2em 0;
+    z-index: 100;
+}
+
+.humburger__link {
+    opacity: 0;
+    text-decoration: none;
+    color: #fff;
+//    font-size: 2em;
+    font-family: $font1;
+    
+    
+    &:hover {
+        text-decoration: underline;
+        transition: 1s all;
+    }
+}
+
+//========== BLOCKS ==========
+.humburger__block {
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    background: rgba($green, 0.95);
+    z-index: 10;
+    
+    &-left {
+        left: 0;
+    }
+    
+    &-right {
+        right: 0;
+    }
+}
+
+//.humburger__block.menu_state_open {
+//    width: 50%;
+//}
+
+
+
+//========== HUMBURGER-BUTTON ==========
+
+.humburger__button {
     position: absolute;
     top: 1.875em;
     right: 1.875em;
     display: block;
     width: 2em;
+//    width: 36px;
+    height: 30px;
     opacity: 0.5;
-    
-    img {
-        max-width: 100%;
-    }
+    cursor: pointer;
+    z-index: 100;
     
     &:hover {
-        opacity: 1;
+        opacity: 0.8;
     }
 }
+
+.humburger__button span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #fff;
+}
+
+.humburger__button span:nth-child(1) {
+  top: 0px;
+}
+
+.humburger__button span:nth-child(2), .humburger__button span:nth-child(3) {
+  top: 10px;
+}
+
+.humburger__button span:nth-child(4) {
+  top: 20px;
+}
+
+.humburger.menu_state_open .humburger__button span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.humburger.menu_state_open .humburger__button span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.humburger.menu_state_open .humburger__button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.humburger.menu_state_open .humburger__button span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.humburger__menu.menu_state_open {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
