@@ -20,9 +20,22 @@
 	right: 0;
 }
 
+//========== MEDIA ==========
 @media screen and (max-width: 1200px) {
     .works-head__triangle {
         height: 6.3125em;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .works-head__triangle {
+        height: 7em;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .works-head__triangle {
+        height: 9em;
     }
 }
 

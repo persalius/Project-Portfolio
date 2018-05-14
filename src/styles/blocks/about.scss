@@ -83,6 +83,18 @@
     }
 }
 
+@media screen and (max-width: 1150px) {
+    .about-head__triangle {
+        height: 7em;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .about-head__triangle {
+        height: 9em;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .about {
         flex-flow: column wrap;

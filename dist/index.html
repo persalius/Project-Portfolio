@@ -17,22 +17,56 @@
 </section>
     <div class="auth-container">
       <div class="bg"></div>
+      <div class="helper"></div>
       <div class="authorization">Авторизоваться</div>
       <div class="copy">© Шевченко Сергей</div>
       <div class="auth">
-        <div class="auth__info">
-          <div class="user">
-            <div class="user__photo"><img class="user__avatar" src="img/user.jpg" alt=""></div>
-            <div class="user__name">Шевченко Сергей</div>
-            <div class="user__desc">Личный сайт разработчика</div>
+        <div class="rotate">
+          <div class="rotate__block-1">
+            <div class="auth__info">
+              <div class="user">
+                <div class="user__photo"><img class="user__avatar" src="img/user.jpg" alt=""></div>
+                <div class="user__name">Шевченко Сергей</div>
+                <div class="user__desc">Личный сайт разработчика</div>
+              </div>
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link socials__link-fb" href="#"></a></li>
+                <li class="socials__item"><a class="socials__link socials__link-gt" href="#"></a></li>
+                <li class="socials__item"><a class="socials__link socials__link-in" href="#"></a></li>
+              </ul>
+            </div>
+            <div class="auth__btns"><a class="auth__btn" href="works.html">Мои работы</a><a class="auth__btn" href="about.html">Обо мне</a><a class="auth__btn" href="#">Блог</a></div>
           </div>
-          <ul class="socials">
-            <li class="socials__item"><a class="socials__link socials__link-fb" href="#"></a></li>
-            <li class="socials__item"><a class="socials__link socials__link-gt" href="#"></a></li>
-            <li class="socials__item"><a class="socials__link socials__link-in" href="#"></a></li>
-          </ul>
+          <div class="rotate__block-2">
+            <h2 class="rotate__title">Авторизуйтесь</h2>
+            <form class="auth__form">
+              <div class="auth__field login__filed">
+                <input class="auth__input auth__input-login" type="text" placeholder="Логин" name="login">
+                <div class="auth__img">
+                  <div class="auth__img-login"></div>
+                </div>
+              </div>
+              <div class="auth__field password__field">
+                <input class="auth__input auth__input-password" type="password" placeholder="Пароль" name="password">
+                <div class="auth__img">
+                  <div class="auth__img-password"></div>
+                </div>
+              </div>
+              <div class="check__fild">
+                <input type="checkbox" id="check" name="check">
+                <label for="check">Я человек</label>
+              </div>
+              <div class="radio__field">
+                <div class="radio__title">Вы точно не робот?</div>
+                <input type="radio" id="radio" name="sureNotRobot">
+                <label for="radio">Да</label>
+                <input type="radio" id="radio1" name="sureNotRobot">
+                <label for="radio1">Не уверен</label>
+              </div>
+            </form>
+            <div class="authorization__btns"><span class="authorization__btn">На главную</span><a class="authorization__btn" href="#">Войти</a></div>
+          </div>
         </div>
-        <div class="auth__btns"><a class="auth__btn" href="works.html">Мои работы</a><a class="auth__btn" href="about.html">Обо мне</a><a class="auth__btn" href="#">Блог</a></div>
       </div>
     </div>
   <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>
