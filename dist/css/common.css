@@ -887,7 +887,7 @@ input[type=radio]:checked + label:before {
 
 .hero__bg {
   top: 0;
-  width: 100%;
+  width: 110%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%); }
@@ -1232,7 +1232,6 @@ input[type=radio]:checked + label:before {
   background: #eeebdf;
   display: flex;
   flex: 1;
-  flex-direction: column;
   align-items: center; }
   .slider__display-pic {
     margin-bottom: 2.75em; }
