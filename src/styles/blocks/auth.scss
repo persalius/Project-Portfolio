@@ -21,6 +21,7 @@
   overflow: hidden;
   border-radius: 10px;
   width: 380px;
+  perspective: 1000px;
     
   .user {
     position: static;
@@ -132,6 +133,21 @@
     border-radius: 5px;
     padding: 0.7em 1.75em;
     cursor: pointer;
+    transition: 0.3s all;
+    
+    &:hover {
+        background: #fff;
+        color: $green;
+    }
+}
+
+.helper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .copy {
@@ -140,11 +156,225 @@
     color: rgba(#fff, 0.5);
 }
 
-//================MEDIA
+.rotate__block-1 {
+    vertical-align: middle;
+    backface-visibility: hidden;
+}
+
+.rotate {
+	position: relative;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.rotate.auth-block {
+    transform: rotateY(180deg);
+}
+
+.socials.auth-block, .auth__btns.auth-block {
+    visibility: hidden;
+}
+
+//===== rotate__block-2 =====
+.rotate__block-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background: rgba(#fcfcfc, .85);
+    width: 100%;
+    height: 100%;
+}
+
+.rotate__title {
+    font-family: $russo;
+    font-size: 2.18em;
+    font-weight: 500;
+    color: $gray;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.9em 0 1.17em;
+}
+
+.auth__form {
+    margin-bottom: 36px;
+}
+
+.auth__field {
+    width: 90%;
+    margin: 0 auto 1.25em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.auth__input {
+    width: 100%;
+    border: none;
+    padding: 1em 1em 1em 3.9375em;
+    outline: none;
+    @include placeholder {
+        color: $black;
+        opacity: 0.6;
+        font-family: "Roboto", sans-serif;
+      }
+}
+
+.auth__img {
+    width: 2.8125em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f0efe9;
+}
+
+.auth__img-login, .auth__img-password {
+    width: 15px;
+    height: 17px;
+    @include centered;
+    background-repeat: no-repeat;
+}
+
+.auth__img-password {
+    width: 18px;
+}
+
+.auth__img-login {
+    background-image: url("../img/icons/login.png");
+    background-position: 0;
+    
+    &.active {
+        background-position: -15px;
+    }
+}
+
+.auth__img-password {
+    background-image: url("../img/icons/password.png");
+    background-position: 0;
+    
+    &.active {
+        background-position: -18px;
+    }
+}
+
+
+// check__fild
+.check__fild {
+    width: 28.95%;
+    margin: 0 auto 1.125em;
+}
+
+input[type=checkbox], input[type=radio] {display: none;}
+
+input[type=checkbox] + label {
+    color: $gray;
+    font-family: "Roboto", sans-serif;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    display: inline-block;
+    background-color: $green;  
+    margin: -5px 11px 0 0;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+input[type=checkbox]:checked + label:before {
+    background-image: url("../img/icons/check.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// radio__field
+.radio__field {
+    width: 52.6%;
+    margin: 0 auto;
+    color: $gray;
+}
+
+.radio__title {
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 0.5em;
+}
+
+input[type=radio] + label:before {
+    content: " ";
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    color: $green;
+    border: 1px solid #d1d2d2;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: -5px 10px 0 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=radio]:checked + label {
+    color: $green;
+}
+
+input[type=radio]:checked + label:before {
+    background-image: url("../img/icons/circle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.radio__field label:first-of-type {
+    margin-right: 1.5em;
+}
+
+// authorization__btns
+.authorization__btns {
+    display: flex;
+    width: auto;
+}
+
+.authorization__btn {
+    background: $green;
+    font-weight: 500;
+    color: #fff;
+    padding: 17px 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+    border-right: 2px solid #6fd1c6;
+    opacity: 0.8;
+    cursor: pointer;
+    
+    &:hover {
+        background: $green_dark;
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+
+
+
+
+
+
+//================ MEDIA ===================
 //==========================================
 @media screen and (max-width: 768px) {    
     .auth {
         width: 348px;
+    }
+    
+    .auth__form {
+        margin-bottom: 64px;
     }
 }
 
@@ -154,13 +384,38 @@
         @include centered("x");
         width: 47%;
     }
+    
+    .auth__form {
+        margin-bottom: 80px;
+    }
 }
 
 @media screen and (max-width: 400px) {
     .auth {
         width: 90%;
     }
+    
+    .radio__title {
+        margin-bottom: 1em;
+    }
+    
+    .auth__form {
+        margin-bottom: 73px;
+    }
 }
+
+@media screen and (max-width: 360px) {
+    .check__fild {
+        width: 31%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .radio__field {
+        width: 57.6%;
+    }
+}
+
 
 
 

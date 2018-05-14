@@ -8,26 +8,78 @@ block content
   
   .auth-container
     .bg
+    .helper
     .authorization Авторизоваться
     .copy © Шевченко Сергей
     .auth
-      .auth__info
-        .user
-          .user__photo
-            img(src=require("../../img/content/user.jpg"), alt="").user__avatar
-          .user__name Шевченко Сергей
-          .user__desc Личный сайт разработчика
-        ul.socials
-            li.socials__item
-                a(href="#").socials__link.socials__link-fb
-            li.socials__item
-                a(href="#").socials__link.socials__link-gt
-            li.socials__item
-                a(href="#").socials__link.socials__link-in
+        .rotate
+            .rotate__block-1
+                .auth__info
+                    .user
+                        .user__photo
+                            img(src=require("../../img/content/user.jpg"), alt="").user__avatar
+                        .user__name Шевченко Сергей
+                        .user__desc Личный сайт разработчика
+                    ul.socials
+                        li.socials__item
+                            a(href="#").socials__link.socials__link-fb
+                        li.socials__item
+                            a(href="#").socials__link.socials__link-gt
+                        li.socials__item
+                            a(href="#").socials__link.socials__link-in
+                .auth__btns
+                    a(href="works.html").auth__btn Мои работы
+                    a(href="about.html").auth__btn Обо мне
+                    a(href="#").auth__btn Блог
+                        
+                        
+            .rotate__block-2
+                h2.rotate__title Авторизуйтесь
+                
+                form.auth__form
+                    .auth__field.login__filed
+                        input(type="text" placeholder="Логин" class="auth__input auth__input-login" name="login")
+                        .auth__img
+                            .auth__img-login
+                    .auth__field.password__field
+                        input(type="password" placeholder="Пароль" class="auth__input auth__input-password" name="password")
+                        .auth__img
+                            .auth__img-password
+                    .check__fild
+                        input(type="checkbox" id="check" name="check")
+                        label(for="check") Я человек
+                    .radio__field
+                        .radio__title Вы точно не робот?
+                        input(type="radio" id="radio" name="sureNotRobot")
+                        label( for="radio") Да
+                        input(type="radio" id="radio1" name="sureNotRobot")
+                        label( for="radio1") Не уверен
+                
+                .authorization__btns
+                    span.authorization__btn На главную
+                    a(href="#").authorization__btn Войти
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
 
-      .auth__btns
-        a(href="works.html").auth__btn Мои работы
-        a(href="about.html").auth__btn Обо мне
-        a(href="#").auth__btn Блог
         
     
