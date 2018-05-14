@@ -1196,17 +1196,92 @@ img {
   .down-arrow:hover {
     opacity: 0.7; }
 
-.hamburger {
+.humburger {
+  position: absolute;
+  z-index: 999;
+  width: 100%; }
+
+.humburger__menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; }
+
+.humburger__menu-item {
+  margin: 2em 0;
+  z-index: 100; }
+
+.humburger__link {
+  opacity: 0;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lobster", sans-serif; }
+  .humburger__link:hover {
+    text-decoration: underline;
+    transition: 1s all; }
+
+.humburger__block {
+  width: 0;
+  height: 100vh;
+  position: absolute;
+  background: rgba(16, 193, 168, 0.95);
+  z-index: 10; }
+  .humburger__block-left {
+    left: 0; }
+  .humburger__block-right {
+    right: 0; }
+
+.humburger__button {
   position: absolute;
   top: 1.875em;
   right: 1.875em;
   display: block;
   width: 2em;
-  opacity: 0.5; }
-  .hamburger img {
-    max-width: 100%; }
-  .hamburger:hover {
-    opacity: 1; }
+  height: 30px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 100; }
+  .humburger__button:hover {
+    opacity: 0.8; }
+
+.humburger__button span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  background: #fff; }
+
+.humburger__button span:nth-child(1) {
+  top: 0px; }
+
+.humburger__button span:nth-child(2), .humburger__button span:nth-child(3) {
+  top: 10px; }
+
+.humburger__button span:nth-child(4) {
+  top: 20px; }
+
+.humburger.menu_state_open .humburger__button span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+.humburger.menu_state_open .humburger__button span:nth-child(2) {
+  transform: rotate(45deg); }
+
+.humburger.menu_state_open .humburger__button span:nth-child(3) {
+  transform: rotate(-45deg); }
+
+.humburger.menu_state_open .humburger__button span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+.humburger__menu.menu_state_open {
+  display: flex; }
 
 .contacts {
   width: 380px;
