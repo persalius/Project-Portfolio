@@ -1,0 +1,271 @@
+// ========== admin ==========
+.admin {
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        padding: 0 10px;
+    }
+}
+
+// ========= admin-header ==========
+.admin-header {
+    height: 9vh;
+    padding: 0 2.5em;
+    background: $green;
+    @extend %clearfix;
+}
+
+.admin-title {
+    color: #fff;
+    font-size: 1.75em;
+    font-weight: 500;
+    line-height: 80px;
+    float: left;
+}
+
+.admin-header__link {
+    float: right;
+    font-weight: 500;
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: 0.3s all;
+    color: #fff;
+    line-height: 80px;
+    
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// ========= tab ==========
+.tabs {
+    background: #f0efe9;
+    @extend %clearfix;
+}
+
+.tab {
+    height: 7vh;
+    float: left;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #455a64;
+    border-right: 2px solid #fff;
+    padding: 1.375em 4.25em;
+}
+
+.activeTab { 
+    color: $green;
+    background: #fff;
+}
+
+//tab_content
+.tab_content {
+    min-height: 84vh;
+    background: url("../img/bg/admin-bg.jpg") no-repeat center;
+    background-size: cover;
+    padding: 3em 1.25em 2.5em;
+    color: #455a64;
+}
+
+// ========== tab-items ==========
+.tab_item-title {
+    font-weight: 500;
+    font-size: 1.3125em;
+    margin-bottom: 2em;
+}
+
+.tab_item-direction {
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 1.25em;
+    display: inline-block;
+}
+
+.admin__table {
+    padding-left: 1.25em;
+    margin-bottom: 1.125em;
+    
+    td {
+        padding-bottom: 10px;
+    }
+    
+    td:first-child {
+        width: 100px;
+    }
+    
+    td:last-child {
+        padding-left: 10px;
+    }
+}
+
+.table__input {
+    width: 46px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    color: #373e42;
+}
+
+.formForAboutMe__blocks {
+    @extend %clearfix;
+}
+
+.formForAboutMe__block {
+    float: left;
+    margin-right: 5%;
+    height: 20em;
+}
+
+.formAdmin-btn {
+    cursor: pointer;
+    background: $green;
+    transition: 0.3s all;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: #fff;
+    padding: 0.82em 1.1875em;
+    border-radius: 4px;
+    
+    &:hover {
+        background: $green_dark;
+    }
+}
+
+//tab2
+.formAdmin__input, .formForblog__textarea {
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 1em 1.1875em;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.formAdmin__input {
+    width: 300px;
+}
+
+.formForblog__textarea {
+    width: 500px;
+    height: 10.3em;
+    resize: none;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar{
+        width:5px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-width:1px 1px 1px 2px;
+        border-color: #777;
+        background-color: $green;
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: #ededed;
+    }
+}
+
+//tab3
+.formAdmin__file {
+    display: none;
+    
+    &+label {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        color: $green;
+        padding-left: 2.875em;
+        transition: 0.3s all;
+        
+        &:before {
+            content: "";
+            display: block;
+            width: 35px;
+            height: 34px;
+            background: url("../img/icons/add-img.png") no-repeat center;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        &:hover {
+            color: $green_dark;
+        }
+    }
+}
+
+
+// ========== admin-status =========
+.admin-status {
+    display: none;
+    width: 280px;
+    height: 112px;
+    background: #fff;
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.admin-status__text {
+    margin-top: 20px;
+    color: #373e42;
+    opacity: 0.8;
+}
+
+.admin-status__btn {
+    width: 38%;
+    height: 40px;
+    line-height: 40px;
+    background: #00bfa5;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s all;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    border-radius: 5px;
+    
+    &:hover {
+        background: #05a58f;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .admin-status {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

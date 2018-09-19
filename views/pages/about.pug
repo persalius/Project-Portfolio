@@ -1,14 +1,14 @@
-extends ../../main-layout
+extends ../main-layout
 
-block title
-    | Обо мне
+block link
+    link(rel="stylesheet", href="./css/about.css")
 
 block content
-    include ../../parts/preloader
-    include ../../parts/humburger-menu
+    include ../parts/preloader
+    include ../parts/humburger-menu
     
     .wrapper
-        include ../../parts/hero
+        include ../parts/hero
         
         section.about-head
             svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about-head__triangle.about-head__triangle_left
@@ -25,7 +25,7 @@ block content
                             | Обо мне
                     .about__info
                         .about__pic
-                            img(src=require("../../img/content/about.jpg") alt="").about__pic-img
+                            img(src="../img/about.jpg" alt="").about__pic-img
                         .about__title
                             .block-title Кто я
                         .block-text
@@ -54,5 +54,8 @@ block content
                                                                 circle(cx="50" cy="50" r="40").skills__circle-under
                                                                 circle(cx="50" cy="50" r="40").skills__circle-above
                                                             .skill__title= skillTitle
-        include ../../parts/map
-        include ../../parts/footer
+        include ../parts/map
+        include ../parts/footer
+        
+    script(type="text/javascript", src="js/common.js")
+    script(type="text/javascript", src="js/about.js")

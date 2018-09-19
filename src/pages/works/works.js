@@ -8,7 +8,14 @@ import addLink from "../../components/addLink";
 import animateScroll from "../../components/animateScroll";
 import preloader from "../../components/preloader";
 import humburger from "../../components/humburger";
+import feedback from "../../components/feedback";
 
 addLink.arrowAddLink("down-arrow", "#works");
 animateScroll.arrowButton("down-arrow");
 animateScroll.arrowButton("reviews__button-up");
+
+// закрыть всплывающее окно о состоянии оправления сообщения
+let statusBtn = document.querySelector(".status__btn");
+statusBtn.addEventListener("click", () => {
+    document.querySelector(".status").style.display = "none";
+});
