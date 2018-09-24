@@ -6,6 +6,7 @@ const favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
 const jsonfile = require("jsonfile"); //удобное чтение json файлов
+const config = require("./config");
 
 const app = express();
 
@@ -23,7 +24,27 @@ app.use(cookieParser())
 // ========== static ==========
 app.use(express.static(path.join(__dirname, "public")));
 // Получение пути к папке, в которую будем загружать картинки проектов
-const uploadDir = path.join(__dirname, "public", "img");
+const uploadDir = path.join(__dirname, config.upload);
+
+
+// ========== MONGOOSE ==========
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+//облачная база данных
+mongoose.connect(config.mlab.host);
+//локальная база данных
+//mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
+//    user: config.db.user,
+//    pass: config.db.password
+//}).catch(e => {
+//    console.log(e);
+//    throw e;
+//});
+
+require("./models/db-close");
+//подключаем модели(сущности, описывающие коллекции базы данных)
+require("./models/blog");
+require("./models/pic");
 
 
 // ========== ROUTES ==========
@@ -36,15 +57,15 @@ app.use("/blog(.html)?", require("./routes/blog"));
 // 404 catch-all handler (middleware)
 app.use((req, res) => {
     res.status(404);
-    res.render("./pages/404");
+    res.render("./pages/404", {title: 404});
 });
 
 // 500 error handler (middleware)
 app.use((err, req, res) => {
     console.error(err.stack);
     res.status(500);
-    res.render("./pages/500");
+    res.render("./pages/500", {title: 500});
 });
 
 
-app.listen(3000, () => console.log("Сервер работает"));
+app.listen(3000, () => console.log("Server started on port 3000 at 127.0.0.1"));

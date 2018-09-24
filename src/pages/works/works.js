@@ -8,7 +8,7 @@ import addLink from "../../components/addLink";
 import animateScroll from "../../components/animateScroll";
 import preloader from "../../components/preloader";
 import humburger from "../../components/humburger";
-import feedback from "../../components/feedback";
+import feedback from "../../components/feedback/feedback";
 
 addLink.arrowAddLink("down-arrow", "#works");
 animateScroll.arrowButton("down-arrow");

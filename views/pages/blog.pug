@@ -1,12 +1,25 @@
 extends ../main-layout
 
-
+block link
+    link(rel="stylesheet", href="./css/blog.css")
 
 block content
   include ../parts/preloader
   
   h1 Блог
-  ul.article-wrap
+  
+  ul.artickle-wrap
+    each index in items
+        li.article
+            .article__title= index.title
+                -
+                    var data = new Date(index.date).toLocaleDateString("ru", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit"
+                    })
+            .article__data= data
+            .article__text= index.body
   
   script(type="text/javascript", src="js/common.js")
-  script(type="text/javascript", src="js/index.js")
+  script(type="text/javascript", src="js/blog.js")

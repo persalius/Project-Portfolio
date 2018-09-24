@@ -6,9 +6,9 @@ block link
 block content
   include ../parts/preloader
   
-  .admin-status
-    .admin-status__text Сообщение отправлено
-    .admin-status__btn Закрыть
+  .status
+    .status__text Сообщение отправлено
+    .status__btn Закрыть
   
   .admin
     section.admin-header
@@ -105,15 +105,15 @@ block content
                             
                     .tab_item 
                         h2.tab_item-title Страница «Блог»
-                        form#formForblog-admin(method="POST" action="admin")
+                        form#formForblog-admin(method="POST" action="admin/addpost")
                             h3.tab_item-direction Добавить запись
-                            input(type="text" placeholder="Название" class="formAdmin__input" name="name")
-                            input(type="text" placeholder="Дата" class="formAdmin__input" name="date")
+                            input(type="text" placeholder="Название" class="formAdmin__input" name="title")
+                            input(type="date" placeholder="Дата" class="formAdmin__input" name="date")
                             textarea(placeholder="Содержание" name="text" class="formForblog__textarea")
                             button(type="submit" class="formAdmin-btn") Добавить
                     .tab_item
                         h2.tab_item-title Страница «Мои работы»
-                        form#formForWorks-admin(method="POST" enctype="multipart/form-data" action="/admin")
+                        form#formForWorks-admin(method="POST" enctype="multipart/form-data" action="/admin/upload")
                             h3.tab_item-direction Добавить работу
                             input(type="text" placeholder="Название проекта" class="formAdmin__input adminNameProject" name="name")
                             input(type="text" placeholder="Технологии" class="formAdmin__input adminTechProject" name="technologies")

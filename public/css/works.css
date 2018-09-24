@@ -1941,7 +1941,7 @@ input[type=radio]:checked + label:before {
     .formAdmin__file + label:hover {
       color: #009688; }
 
-.admin-status {
+.status {
   display: none;
   width: 280px;
   height: 112px;
@@ -1955,12 +1955,12 @@ input[type=radio]:checked + label:before {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   font-size: 16px; }
 
-.admin-status__text {
+.status__text {
   margin-top: 20px;
   color: #373e42;
   opacity: 0.8; }
 
-.admin-status__btn {
+.status__btn {
   width: 38%;
   height: 40px;
   line-height: 40px;
@@ -1974,9 +1974,12 @@ input[type=radio]:checked + label:before {
   transform: translateX(-50%);
   bottom: 20px;
   border-radius: 5px; }
-  .admin-status__btn:hover {
+  .status__btn:hover {
     background: #05a58f; }
 
 @media screen and (max-width: 360px) {
   .admin-status {
     width: 90%; } }
+
+h1 {
+  color: green; }

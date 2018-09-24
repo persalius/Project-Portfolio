@@ -37,6 +37,12 @@ block content
                         img(src="../img/down.jpg" alt="")
                     a(href="#").slider__btn.slider__btn_right
                         img(src="../img/up.jpg" alt="")
+                        
+        ul
+            each index in items
+                figure
+                    img(src= `${index.picture}`)
+                    figcaption= index.name
     
                     
         include ../parts/reviews

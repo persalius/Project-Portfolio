@@ -1,13 +1,21 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer"); // пакет для отправки письма на почту
 const config = require("../config.json");
+const mongoose = require("mongoose");
 
 router.get("/", (req, res) => {
     let obj = {
         title: "Мои Работы"
     };
-    res.render("./pages/works", obj);
+    const Model = mongoose.model("pic");
+    Model
+        .find()
+        .then(items => {
+        //обрабатываем шаблон и отправляем его в браузер передав в шаблон item с изображениями и текстом
+        Object.assign(obj, {items: items});
+        res.render("./pages/works", obj);
+    })
 });
 
 //===== отправка письма на почту =====

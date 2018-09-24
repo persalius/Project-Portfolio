@@ -21,7 +21,8 @@ const common = merge([
         "index": PATHS.source + "/pages/index/index.js",
         "about": PATHS.source + "/pages/about/about.js",
         "works": PATHS.source + "/pages/works/works.js",
-        "admin": PATHS.source + "/pages/admin/admin.js"
+        "admin": PATHS.source + "/pages/admin/admin.js",
+        "blog": PATHS.source + "/pages/blog/blog.js"
     },
     output: {
         path: PATHS.build,
