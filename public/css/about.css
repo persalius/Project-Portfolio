@@ -753,7 +753,10 @@ input[type=radio]:checked + label:before {
 
 .authorization__btns {
   display: flex;
-  width: auto; }
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 .authorization__btn {
   background: #10c1a8;
@@ -770,7 +773,8 @@ input[type=radio]:checked + label:before {
   .authorization__btn:hover {
     background: #009688; }
   .authorization__btn:last-child {
-    border-right: none; }
+    outline: none;
+    border: none; }
 
 @media screen and (max-width: 768px) {
   .auth {

@@ -36,7 +36,7 @@ block content
             .rotate__block-2
                 h2.rotate__title Авторизуйтесь
                 
-                form.auth__form
+                form(class="auth__form" id="login")
                     .auth__field.login__filed
                         input(type="text" placeholder="Логин" class="auth__input auth__input-login" name="login")
                         .auth__img
@@ -54,10 +54,11 @@ block content
                         label( for="radio") Да
                         input(type="radio" id="radio1" name="sureNotRobot")
                         label( for="radio1") Не уверен
+                    .authorization__btns
+                        span.authorization__btn На главную
+                        button(type="submit" class="authorization__btn") Войти
                 
-                .authorization__btns
-                    span.authorization__btn На главную
-                    a(href="#").authorization__btn Войти
+                
                     
 
   script(type="text/javascript", src="js/common.js")

@@ -1,4 +1,7 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const crypto = require("crypto");
+
 const router = express.Router();
 
 let obj = {
@@ -11,6 +14,10 @@ router.get("/", (req, res) => {
 
 router.get("/index(.html)?", (req, res) => {
     res.render("./pages/index", obj);
+});
+
+router.post("/login", (req, res) => {
+    
 });
 
 module.exports = router;

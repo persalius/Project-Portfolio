@@ -6,6 +6,7 @@ const favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
 const jsonfile = require("jsonfile"); //удобное чтение json файлов
+const session = require("express-session");
 const config = require("./config");
 
 const app = express();

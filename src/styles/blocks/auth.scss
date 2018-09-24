@@ -336,6 +336,9 @@ input[type=radio]:checked + label:before {
 .authorization__btns {
     display: flex;
     width: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .authorization__btn {
@@ -356,7 +359,8 @@ input[type=radio]:checked + label:before {
     }
 
     &:last-child {
-        border-right: none;
+        outline: none;
+        border: none;
     }
 }
 
