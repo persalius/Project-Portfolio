@@ -10,6 +10,7 @@ const jsonfile = require("jsonfile"); //удобное чтение json фай�
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const config = require("./config");
+const server = require("http").createServer(app);
 
 const app = express();
 
@@ -83,4 +84,4 @@ app.use((err, req, res) => {
 });
 
 
-app.listen(3000, () => console.log("Server started on port 3000 at 127.0.0.1"));
+server.listen(3000, () => console.log("Server started on port 3000"));
