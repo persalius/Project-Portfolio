@@ -48,5 +48,8 @@
     "normalize.css": "^8.0.0",
     "pug": "^2.0.3",
     "serve-favicon": "^2.5.0"
+  },
+  "engines": {
+    "node": "8.12.0"
   }
 }
