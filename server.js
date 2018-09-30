@@ -5,31 +5,15 @@ const bodyParser = require("body-parser");
 const favicon = require("serve-favicon");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
+const mongoose = require("mongoose");
 const jsonfile = require("jsonfile"); //удобное чтение json файлов
 const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const config = require("./config");
 
 const app = express();
 
-// ========== view engine setup ==========
-app.set("view engine", "pug");
-// ========== favicon ==========
-app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")))
-//logger
-//app.use(logger("dev"));
-// ========== body-parser ==========
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-// ========== cookie-parser ==========
-app.use(cookieParser())
-// ========== static ==========
-app.use(express.static(path.join(__dirname, "public")));
-// Получение пути к папке, в которую будем загружать картинки проектов
-const uploadDir = path.join(__dirname, config.upload);
-
-
 // ========== MONGOOSE ==========
-const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 //облачная база данных
 mongoose.connect(config.mlab.host);
@@ -46,6 +30,36 @@ require("./models/db-close");
 //подключаем модели(сущности, описывающие коллекции базы данных)
 require("./models/blog");
 require("./models/pic");
+require("./models/user");
+
+// ========== view engine setup ==========
+app.set("view engine", "pug");
+// ========== favicon ==========
+app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")))
+//logger
+//app.use(logger("dev"));
+// ========== body-parser ==========
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+// ========== cookie-parser ==========
+app.use(cookieParser());
+// ========== session ==========
+app.use(session({
+    secret: "secret",
+    key: "keys",
+    cookie: {
+        path: "/",
+        httpOnly: true,
+        maxAge: null
+    },
+    saveUninitialized: false,
+    resave: false,
+    store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
+// ========== static ==========
+app.use(express.static(path.join(__dirname, "public")));
+// Получение пути к папке, в которую будем загружать картинки проектов
+const uploadDir = path.join(__dirname, config.upload);
 
 
 // ========== ROUTES ==========

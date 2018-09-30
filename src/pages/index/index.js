@@ -17,14 +17,30 @@ if (formLogin) {
 
 function prepareSendLogin(e) {
     e.preventDefault();
-    let data = {
-        login: formLogin.login.value,
-        password: formLogin.password.value
+    
+    //проверка стоит ли галочка на чекбоксе. Если да присваиваем value в переменную
+    let checkBtn = "";
+    if (check.checked) { 
+        checkBtn = formLogin.check.value;
     }
     
-    prepareSend("/login", formLogin, data, data => {
+    //данные для отправки на сервер
+    let data = {
+        login: formLogin.login.value,
+        password: formLogin.password.value,
+        check: checkBtn,
+        robot: formLogin.sureNotRobot.value
+    }
+    
+    prepareSend("/", formLogin, data, data => {
         if (data === "Авторизация успешна!") {
             location.href = "/admin";
         }
     })
 }
+
+// закрыть всплывающее окно о состоянии оправления сообщения
+let statusBtn = document.querySelector(".status__btn");
+statusBtn.addEventListener("click", () => {
+    document.querySelector(".status").style.display = "none";
+});

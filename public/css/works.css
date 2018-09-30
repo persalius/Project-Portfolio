@@ -776,6 +776,42 @@ input[type=radio]:checked + label:before {
     outline: none;
     border: none; }
 
+.status {
+  display: none;
+  width: 280px;
+  height: 112px;
+  background: #fff;
+  position: fixed;
+  text-align: center;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  font-size: 16px; }
+
+.status__text {
+  margin-top: 20px;
+  color: #373e42;
+  opacity: 0.8; }
+
+.status__btn {
+  width: 38%;
+  height: 40px;
+  line-height: 40px;
+  background: #00bfa5;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  border-radius: 5px; }
+  .status__btn:hover {
+    background: #05a58f; }
+
 @media screen and (max-width: 768px) {
   .auth {
     width: 348px; }
@@ -802,7 +838,9 @@ input[type=radio]:checked + label:before {
 
 @media screen and (max-width: 360px) {
   .check__fild {
-    width: 31%; } }
+    width: 31%; }
+  .status {
+    width: 90%; } }
 
 @media screen and (max-width: 350px) {
   .radio__field {
@@ -1982,7 +2020,7 @@ input[type=radio]:checked + label:before {
     background: #05a58f; }
 
 @media screen and (max-width: 360px) {
-  .admin-status {
+  .status {
     width: 90%; } }
 
 h1 {

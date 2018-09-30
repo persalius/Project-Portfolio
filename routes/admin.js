@@ -7,7 +7,19 @@ const mongoose = require("mongoose");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+// проверка на авторизацию
+const isAdmin = (req, res, next) => {
+    //если в сессии текущего пользователя есть пометка о том, что он является администратором
+    if (req.session.isAdmin) {
+        //то все хорошо
+        return next();
+    }
+    //если нет, то перебросить пользователя на главную страницу сайта
+    res.redirect("/");
+}
+
+//путь к странице
+router.get("/", isAdmin, (req, res) => {
     let obj = {
         title: "Админ"
     };
@@ -15,7 +27,7 @@ router.get("/", (req, res) => {
 });
 
 // ========== загрузка изображений ==========
-router.post("/upload", (req, res) => {
+router.post("/upload", isAdmin, (req, res) => {
     let form = new formidable.IncomingForm();
     form.uploadDir = path.join(process.cwd(), config.upload);
     form.parse(req, (err, fields, files) => {
@@ -55,28 +67,8 @@ router.post("/upload", (req, res) => {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ========== загрузка постов ==========
-router.post("/addpost", (req, res) => {
+router.post("/addpost", isAdmin, (req, res) => {
     //требуем наличия заголовка, даты и текста
     if (!req.body.title || !req.body.date || !req.body.text) {
         return res.json({status: "Укажите данные!"});

@@ -6,6 +6,10 @@ block link
 block content
   include ../parts/preloader
   
+  .status
+    .status__text Сообщение отправлено
+    .status__btn Закрыть
+  
   .auth-container
     .bg
     .helper
@@ -36,7 +40,7 @@ block content
             .rotate__block-2
                 h2.rotate__title Авторизуйтесь
                 
-                form(class="auth__form" id="login")
+                form(class="auth__form" id="login" method="POST" action="/")
                     .auth__field.login__filed
                         input(type="text" placeholder="Логин" class="auth__input auth__input-login" name="login")
                         .auth__img
@@ -46,13 +50,13 @@ block content
                         .auth__img
                             .auth__img-password
                     .check__fild
-                        input(type="checkbox" id="check" name="check")
+                        input(type="checkbox" id="check" name="check" value="check")
                         label(for="check") Я человек
                     .radio__field
                         .radio__title Вы точно не робот?
-                        input(type="radio" id="radio" name="sureNotRobot")
+                        input(type="radio" id="radio" name="sureNotRobot" value="yes")
                         label( for="radio") Да
-                        input(type="radio" id="radio1" name="sureNotRobot")
+                        input(type="radio" id="radio1" name="sureNotRobot" value="no")
                         label( for="radio1") Не уверен
                     .authorization__btns
                         span.authorization__btn На главную

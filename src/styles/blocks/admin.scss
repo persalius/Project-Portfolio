@@ -208,7 +208,7 @@
 }
 
 
-// ========== admin-status =========
+// ========== status =========
 .status {
     display: none;
     width: 280px;
@@ -252,7 +252,7 @@
 
 
 @media screen and (max-width: 360px) {
-    .admin-status {
+    .status {
         width: 90%;
     }
 }
