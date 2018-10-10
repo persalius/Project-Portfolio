@@ -10,14 +10,15 @@ const jsonfile = require("jsonfile"); //удобное чтение json фай�
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const config = require("./config");
-const server = require("http").createServer(app);
+
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
 // ========== MONGOOSE ==========
 mongoose.Promise = global.Promise;
 //облачная база данных
-mongoose.connect(config.mlab.host);
+mongoose.connect(config.mlab.host, { useNewUrlParser: true });
 //локальная база данных
 //mongoose.connect(`mongodb://${config.db.host}:${config.db.port}/${config.db.name}`, {
 //    user: config.db.user,
@@ -84,4 +85,4 @@ app.use((err, req, res) => {
 });
 
 
-server.listen(3000, () => console.log("Server started on port 3000"));
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
