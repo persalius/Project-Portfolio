@@ -5,21 +5,69 @@ block link
 
 block content
   include ../parts/preloader
+  include ../parts/humburger-menu
   
-  h1 Блог
+  .wrapper.wrapper__blog
+    section(class="section hero" id="hero")
+        .hero__bg
+            img(src="../img/portfolio.jpg" alt="").hero__bg-img
+
+        .hero__container.blog__container
+            img(src="../img/blog.png" alt="").hero-title-pic
+
+        .user
+            .user__hero-info
+                .user__pic-container
+                    img(src="../img/user.jpg" alt="").user__pic
+                .user__name.user__name-blog Blog
+
+        ul.socials.socials_hero
+            li.socials__item
+                a(href="#").socials__link.socials__link-fb
+            li.socials__item
+                a(href="#").socials__link.socials__link-gt
+            li.socials__item
+                a(href="#").socials__link.socials__link-in
+
+        a(href="#").down-arrow
+            img(src="../img/arrow_down.svg", alt="arrow_down").down-arrow__icon
+        
+        
+    
+    section.about-head.blog-head
+            svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about-head__triangle.about-head__triangle_left
+                polygon(points="0,0 0,110 1000, 110")
+            svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about-head__triangle.about-head__triangle_right
+                polygon(points="0,110 1000,110 1000,0")
+    
+    section.blog
+        .blog__left
+            .blog__left-btn
+            ul.blog__left-list
   
-  ul.artickle-wrap
-    each index in items
-        li.article
-            .article__title= index.title
-                -
-                    var data = new Date(index.date).toLocaleDateString("ru", {
-                        year: "numeric",
-                        month: "2-digit",
-                        day: "2-digit"
-                    })
-            .article__data= data
-            .article__text= index.body
+                each index in items
+                    li.blog__left-item
+                        a.blog__left-link(href="#")= index.title
+            
+        .blog__right
+            ul.article-wrap
+                each index in items
+                    li.article
+                        .article__title= index.title
+                            -
+                                var data = new Date(index.date).toLocaleDateString("ru", {
+                                    year: "numeric",
+                                    month: "2-digit",
+                                    day: "2-digit"
+                                });
+                                                                
+                        .article__data= data
+                        .article__text= index.body
+                        
+    include ../parts/footer
+    
+ 
+  
   
   script(type="text/javascript", src="js/common.js")
   script(type="text/javascript", src="js/blog.js")

@@ -59,7 +59,7 @@ export default (function() {
     
     setTimeout(function(){
         preloader.init(); 
-    }, 1000);
+    }, 500);
 //    $(function() {
 //       preloader.init(); 
 //    });

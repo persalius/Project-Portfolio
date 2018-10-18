@@ -1,3 +1,258 @@
-h1 {
-    color: green;
+// ===== blog__container =====
+.blog__container {
+    img {
+        width: 25%;
+        margin-top: 15%;
+    }
 }
+
+// ===== wrapper__blog =====
+.wrapper__blog .footer {
+    position: static;
+}
+
+.user__name-blog {
+    width: 200px;
+    font-family: "Lobster", sans-serif;
+    font-size: 4em;
+    position: relative;
+    margin-bottom: 0;
+    
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        opacity: 0.5;
+        background: #fff;
+    }
+    
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 5px;
+        opacity: 0.5;
+        background: #fff;
+    }
+}
+
+
+// ===== blog-head =====
+.blog-head {
+    .about-head__triangle {
+        fill: #fff;
+    }
+}
+
+// ===== blog =====
+.blog {
+    margin-top: 4.375em;
+    padding: 0 10px;
+    @extend %clearfix;
+}
+
+// ===== blog__left =========================================================
+.blog__left {
+    width: 300px;
+    float: left;
+    margin-right: 7%;
+    transition: 0.3s all;
+}
+
+.blog__left.blog__left-active {
+    left: 0;
+}
+
+// ===== blog__left-item =====
+.blog__left-item {
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.blog__left-link {
+    display: block;
+    color: #455a64;
+    text-decoration: none;
+    transition: 0.3s all;
+    padding: 0.875em 0;
+    padding-right: 20px;
+    position: relative;
+    
+    &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: #00bfa5;
+        transition: 0.3s all;
+    }
+    
+    &:hover {
+        color: #00bfa5;
+        
+        &:after {
+            display: block;
+        }
+    }
+}
+
+.blog__left-link.active-link {
+    color: #00bfa5;
+    font-weight: 500;
+    
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: #00bfa5;
+        transition: 0.3s all;
+    }
+}
+
+// ===== blog__right =========================================================
+.blog__right {
+    width: calc(93% - 300px);
+    float: right;
+}
+
+.article {
+	padding-bottom: 4.3125em;
+    border-bottom: 5px solid #f1f1f2;
+    margin-bottom: 4.3125em;
+    
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}
+
+.article__title {
+    font-family: "Lobster", sans-serif;
+    font-size: 2.15em;
+    color: #455a64;
+    margin-bottom: 0.7em;
+}
+
+.article__data {
+    color: #00bfa5;
+    margin-bottom: 1.5625em;
+}
+
+.article__text {
+    color: #455a64;
+    line-height: 1.625;
+}
+
+
+// ===== blog__left-btn =====
+.blog__left-btn {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+    background: #00bfa5;
+    border-radius: 50%;
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+// ===== media =====
+@media screen and (max-width: 770px) {
+    .blog__left {
+        width: 280px;
+        height: 100vh;
+        float: none;
+        margin-right: 0;
+        position: fixed;
+        top: 0;
+        left: -280px;
+        background: #00bfa5;
+        box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2);
+        z-index: 110;
+    }
+    
+    .blog__left-btn {
+        display: block;
+    }
+    
+    .blog__left-list {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .blog__left-link {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &:after {
+            content: none;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .blog__left-link.active-link {
+        color: #fff;
+
+        &:after {
+            content: none;
+        }
+    }
+    
+    .blog__right {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
