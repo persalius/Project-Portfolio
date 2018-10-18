@@ -2203,9 +2203,10 @@ input[type=radio]:checked + label:before {
   .blog__left-list {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 20px;
     transform: translateY(-50%); }
   .blog__left-link {
+    padding-right: 0;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7); }
     .blog__left-link:after {
