@@ -68,7 +68,7 @@ $(window).on("scroll", function() {
     }
 });
 
-// Скрываем/показываем список статей на моб. устройствах
+// Скрываем/показываем список статей на моб. устройствах.
 $(".blog__left-btn").on("click", function() {
     $(".blog__left").toggleClass("blog__left-active");
 });
