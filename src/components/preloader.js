@@ -57,10 +57,9 @@ export default (function() {
       }
     }());
     
-    setTimeout(function(){
-        preloader.init(); 
-    }, 500);
-//    $(function() {
-//       preloader.init(); 
-//    });
+    preloader.init();
+    
+//    setTimeout(function(){
+//        preloader.init(); 
+//    }, 500);
 })();

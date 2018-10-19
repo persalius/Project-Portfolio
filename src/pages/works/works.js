@@ -12,7 +12,7 @@ import feedback from "../../components/feedback/feedback";
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 
-addLink.arrowAddLink("down-arrow", "#works");
+addLink.arrowAddLink("down-arrow", ".slider");
 animateScroll.arrowButton("down-arrow");
 animateScroll.arrowButton("reviews__button-up");
 
