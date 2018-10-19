@@ -22,7 +22,7 @@ statusBtn.addEventListener("click", () => {
     document.querySelector(".status").style.display = "none";
 });
 
-// Карусель
+// Карусель.
 $(".scroll").slick({
     autoplay: false,
     autoplaySpeed: 3000,
