@@ -1,0 +1,29 @@
+.header {    
+    margin-bottom: 1.325em;
+    
+    .container {
+        padding: 2em 0 1.1875em;
+	    border-bottom: 1px solid $line;
+        position: relative;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .header {    
+        .container {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

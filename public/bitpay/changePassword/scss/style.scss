@@ -1,0 +1,49 @@
+//variables
+//==============================
+$line: #e0e0e0;
+//color
+$color_dark: #2e3e4f;
+$color_green: #87c42e;
+$color-blue: #3167c9;
+$color-blue2: #1c84d9;
+
+//fonts
+$font-swanky: 'swanky', sans-serif;
+$font-geometria: "geometria", sans-serif;
+$font-geometria-bold: "geometria-bold", sans-serif;
+$font-geometria-light: "geometria-light", sans-serif;
+$font-geometria-medium: "geometria-medium", sans-serif;
+
+//layout setups
+//==============================
+@import "layout/_normalize.scss";
+@import "layout/_setups.scss";
+@import "layout/_fonts.scss";
+
+//mixins
+//==============================
+@import "helpers/_mixins.scss";
+
+//blocks
+//==============================
+@import "blocks/_select.scss";
+@import "blocks/_header.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_menu.scss";
+@import "blocks/_bmenu.scss";
+@import "blocks/_newInvoice.scss";
+@import "blocks/_addnew.scss";
+@import "blocks/_new-password.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+

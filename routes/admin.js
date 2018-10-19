@@ -45,6 +45,11 @@ router.post("/upload", isAdmin, (req, res) => {
             return res.json({status: "Не указаны технологии"});
         }
         
+        if (!fields.link) {
+            fs.unlink(files.photo.path);
+            return res.json({status: "Не указана ссылка"});
+        }
+        
         // если ошибок нет, то создаем новую picture и передаем в нее поле из формы
         const Model = mongoose.model("pic");
         fs.rename(files.photo.path, path.join(config.upload, files.photo.name), err => {
@@ -53,7 +58,7 @@ router.post("/upload", isAdmin, (req, res) => {
                 fs.rename(files.photo.path, files.photo.name);
             }
             let dir = config.upload.substr(config.upload.indexOf("/"));
-            const item = new Model({name: fields.name});
+            const item = new Model({name: fields.name, technologies: fields.technologies, link: fields.link});
             item
                 .save()
                 .then(pic => {

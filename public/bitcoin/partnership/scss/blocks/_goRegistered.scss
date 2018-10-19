@@ -1,0 +1,55 @@
+.goRegistered {
+    background: url("../img/goRegistered.jpg") no-repeat center;
+    background-size: cover;
+    padding: 4em 0;
+    
+    h2 {
+        color: #fbfbfb;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        margin-bottom: 1.7em;
+    }
+}
+
+.goRegistered__btn {
+    display: block;
+    width: 19%;
+    background: $green;
+    color: #fbfbfb;
+    font-family: $font-helvetica-rom;
+    padding: 0.875em 0;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.3s all;
+    
+    &:hover {
+        background: $green_hover;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .goRegistered__btn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .goRegistered {    
+        h2 {
+            font-size: 1em;
+            line-height: 1.9;
+        }
+    }
+    
+    .goRegistered__btn {
+        width: 70%;
+        font-size: 0.875em;
+        letter-spacing: 1.8px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .goRegistered__btn {
+        width: 100%;
+    }
+}

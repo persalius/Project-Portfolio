@@ -7,6 +7,16 @@ const PicSchema = new Schema({
         required: [true, "Укажите описание картинки"]
     },
     
+    technologies: {
+        type: String,
+        required: [true, "Укахите технологии"]
+    },
+    
+    link: {
+        type: String,
+        required: [true, "Укахите технологии"]
+    },
+    
     picture: {
         type: String
     }

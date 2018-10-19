@@ -1,0 +1,90 @@
+.scroll {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    overflow: hidden;
+    
+    div {
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    img {
+        width: 100%;
+       height: 100%;
+       object-fit: contain;
+    }
+}
+
+.carousel__button-left,
+.carousel__button-right {
+    width: 16px;
+    height: 29px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.carousel__button-left {
+    left: 10px;
+    background: url("../img/icons/arrow-back.png") no-repeat center;
+}
+
+.carousel__button-right {
+    right: 10px;
+    background: url("../img/icons/arrow-next.png") no-repeat center;
+}
+
+@media screen and (max-width: 770px) {
+    .scroll {
+        width: 98%;
+    }
+    
+    .carousel__button-left {
+        left: 10%;
+    }
+
+    .carousel__button-right {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel__button-left {
+        left: 5%;
+    }
+
+    .carousel__button-right {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .scroll {
+        width: 100%;
+    }
+    
+    .carousel__button-left {
+        left: 2%;
+    }
+
+    .carousel__button-right {
+        right: 2%;
+    }
+}
+
+
+
+
+
+
+
+

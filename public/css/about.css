@@ -339,7 +339,7 @@ template {
 [hidden] {
   display: none;
 }
-.about:after, .footer__row:after, .admin-header:after, .tabs:after, .formForAboutMe__blocks:after, .blog:after {
+.about:after, .footer__row:after, .slider:after, .admin-header:after, .tabs:after, .formForAboutMe__blocks:after, .blog:after {
   content: "";
   display: block;
   clear: both; }
@@ -1313,26 +1313,15 @@ input[type=radio]:checked + label:before {
       padding-left: 0;
       padding-right: 0; } }
 
-.slider {
-  display: flex;
-  height: 75vh; }
-
-.slider__desc, .slider__display {
-  padding-top: 2em;
-  position: relative; }
+.btn {
+  outline: none; }
 
 .slider__desc {
   background: #efeee9;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   text-align: center; }
   .slider__desc .block-title {
-    box-sizing: content-box; }
-  .slider__desc-info {
-    max-width: 90%; }
+    box-sizing: content-box;
+    text-transform: none; }
   .slider__desc-title {
     margin-bottom: 20px; }
   .slider__desc-skills {
@@ -1345,77 +1334,45 @@ input[type=radio]:checked + label:before {
     margin-bottom: 2.5em; }
 
 .slider__display {
-  background: #eeebdf;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  align-items: center; }
+  background: #eeebdf; }
 
-.slider__btns {
-  width: 100%;
-  margin-bottom: -7px;
-  display: flex;
-  margin-top: auto; }
+.slider {
+  height: 63vh;
+  display: block; }
 
-.slider__btn {
+.slider__desc {
+  width: 50%;
+  height: 100%;
+  float: left;
   display: block;
-  flex: 1; }
-  .slider__btn img {
-    width: 100%; }
+  padding-top: 0;
+  position: relative; }
 
-.slider__display-img {
-  width: 80%; }
+.slider__display {
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: block;
+  position: relative;
+  padding-top: 0; }
 
-@media screen and (max-width: 768px) {
+.slider__desc-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%; }
+
+@media screen and (max-width: 770px) {
   .slider {
-    flex-direction: column;
     height: 100vh; }
-  .slider__desc {
-    box-sizing: content-box;
-    padding-top: 3em;
-    padding-bottom: 4em;
-    flex: 1; }
+  .slider__desc,
   .slider__display {
-    flex: 3;
-    padding-top: 1em; }
-  .slider__display-img {
-    width: 60%; }
-  .slider__desc-title {
-    margin-bottom: 0; }
-  .slider__desc-skills {
-    margin: 1em 0; }
-  .slider .block-title {
-    padding: 0;
-    max-width: 98%; }
-    .slider .block-title:after, .slider .block-title:before {
-      display: none; }
-  .slider__desc-info {
+    float: none;
     width: 100%;
-    max-width: 100%; } }
-
-@media screen and (max-width: 560px) {
-  .slider__display-img {
-    width: 90%; } }
-
-@media screen and (max-width: 480px) {
-  .slider__desc-info {
-    max-width: 100%; }
+    height: 50%; }
   .slider__desc {
-    padding-top: 4em;
-    padding-bottom: 4em; }
-  .slider__display {
-    padding-top: 2em; } }
-
-@media screen and (max-width: 450px) {
-  .slider__display-img {
-    width: 100%; } }
-
-@media screen and (max-width: 360px) {
-  .slider .block-title {
-    font-size: 2em; }
-  .slider__desc {
-    flex: 2; } }
+    padding-bottom: 0; } }
 
 .socials {
   position: absolute;
@@ -2222,3 +2179,62 @@ input[type=radio]:checked + label:before {
   .blog__right {
     width: 100%;
     float: none; } }
+
+.scroll {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  overflow: hidden; }
+  .scroll div {
+    height: 100%;
+    overflow: hidden;
+    text-align: center; }
+  .scroll img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+
+.carousel__button-left,
+.carousel__button-right {
+  width: 16px;
+  height: 29px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.carousel__button-left {
+  left: 10px;
+  background: url(../img/arrow-back.png) no-repeat center; }
+
+.carousel__button-right {
+  right: 10px;
+  background: url(../img/arrow-next.png) no-repeat center; }
+
+@media screen and (max-width: 770px) {
+  .scroll {
+    width: 98%; }
+  .carousel__button-left {
+    left: 10%; }
+  .carousel__button-right {
+    right: 10%; } }
+
+@media screen and (max-width: 500px) {
+  .carousel__button-left {
+    left: 5%; }
+  .carousel__button-right {
+    right: 5%; } }
+
+@media screen and (max-width: 400px) {
+  .scroll {
+    width: 100%; }
+  .carousel__button-left {
+    left: 2%; }
+  .carousel__button-right {
+    right: 2%; } }

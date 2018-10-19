@@ -1,0 +1,40 @@
+.hidden-menu {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    z-index: 999999;
+    padding: 90px 0 0 10px;
+    font-family: $font-helvetica-med;
+    top: 0;
+    left: -250px;
+    
+    .language {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+        
+        .language__name {
+            padding-top: 2px;
+        }
+    }
+    
+    .header__menu {
+        display: block;
+        float: none;
+        color: #000;
+        
+        .header__link {
+            float: none;
+            margin-right: 0;
+        }
+        
+        a {
+            color: #000;
+            padding: 1em 0;
+            border-bottom: 1px solid $green;
+            display: block;
+        }
+    }
+}

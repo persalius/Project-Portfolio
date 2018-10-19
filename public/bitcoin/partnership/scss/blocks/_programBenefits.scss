@@ -1,0 +1,194 @@
+.programBenefits {
+    margin-bottom: 12.25em;
+    
+    .container {
+        @extend %clearfix;
+    }
+    
+    h2 {
+        margin: 1.6em 0 1em;
+    }
+}
+
+.programBenefits__desc {
+    text-align: center;
+    color: $grey2;
+    font-family: $font-helvetica-rom;
+    margin-bottom: 2.375em;
+}
+
+// ========== programBenefits__block ==========
+.programBenefits__block {
+    width: 22.6%;
+    margin-right: 3.2%;
+    float: left;
+    padding-top: 3.375em;
+    
+    &-1 {
+        background: url("../img/icons/stopwatch.png") no-repeat;
+        background-position: left top;
+    }
+    
+    &-2 {
+        background: url("../img/icons/realibility.png") no-repeat;
+        background-position: left top;
+    }
+    
+    &-3 {
+        background: url("../img/icons/manager.png") no-repeat;
+        background-position: left top;
+    }
+    
+    &-4 {
+        background: url("../img/icons/diagram.png") no-repeat;
+        background-position: left top;
+    }
+    
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.programBenefits__block-title {
+    font: 1.25em $font-helvetica-med;
+    color: $grey;
+    letter-spacing: 1px;
+    margin-bottom: 0.6em;
+}
+
+.programBenefits__block-text {
+    font: 0.875em $font-helvetica-rom;
+    color: $grey2;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+    .programBenefits {
+        margin-bottom: 4.5em;
+    }
+    
+    .programBenefits__block {
+        width: 48%;
+        margin-right: 4%;
+        padding-top: 0;
+        padding-left: 12.35%;
+        margin-bottom: 2.25em;
+        
+        &:nth-of-type(odd) {
+            margin-right: 0;
+        }
+        
+        &-1 {
+            background-size: 12%;
+            background-position: 7% top;
+        }
+
+        &-2 {
+            background-size: 12%;
+            background-position: 7% top;
+        }
+
+        &-3 {
+            background-size: 12%;
+            background-position: 7% top;
+        }
+
+        &-4 {
+            background-size: 12%;
+            background-position: 7% top;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .programBenefits__block {
+        padding-left: 9%;
+        
+        &-1 {
+            background-position: left top;
+        }
+
+        &-2 {
+            background-position: left top;
+        }
+
+        &-3 {
+            background-position: left top;
+        }
+
+        &-4 {
+            background-position: left top;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .programBenefits {
+        margin-bottom: 0;
+        
+        h2 {
+            font-size: 1em;
+            line-height: 1.6875em;
+        }
+    }
+    
+    .programBenefits__desc {
+        font-size: 0.75em;
+    }
+    
+    .programBenefits__block {
+        width: 100%;
+        margin-right: 0;
+        padding-left: 20%;
+        
+        &-1 {
+            background-size: 10%;
+            background-position: left top;
+        }
+
+        &-2 {
+            background-size: 10%;
+            background-position: left top;
+        }
+
+        &-3 {
+            background-size: 10%;
+            background-position: left top;
+        }
+
+        &-4 {
+            background-size: 10%;
+            background-position: left top;
+        }
+    }
+    
+    .programBenefits__block-title {
+        font-size: 1em;
+    }
+    
+    .programBenefits__block-text {
+        font-size: 0.75em;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+</head>
+<body>
+
+
+
+<!-- HUMBURGER -->
+    <div class="bmenu">
+        <div class="top part"> </div>
+        <div class="middle part"> </div>
+        <div class="bottom part"></div>
+    </div>
+
+<!-- MENU-->
+    <div class="menu">
+        <div class="menu__logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+        
+        <div class="menu__name">Maxim</div>
+        <div class="menu__compay">BLACKMOON FG LTD</div>
+        
+        <ul class="menu__nav">
+            <li><a href="../dashboard/" class="menu__link item-dashboard">Dashboard</a></li>
+            <li><a href="../customers/" class="menu__link item-customers">Customers</a></li>
+            <li><a href="../Invoices/" class="menu__link item-invoices">Invoices</a></li>
+            <li><a href="../payouts/" class="menu__link item-payouts">Payouts</a></li>
+            <li><a href="../changePassword/" class="menu__link item-settings">Settings</a></li>
+            <li><a href="../profile/" class="menu__link item-profile">Profile</a></li>
+            <li><a href="../authorization/" class="menu__link item-logout">Logout</a></li>
+        </ul>
+    </div>
+    
+    <div class="wrapper">
+    <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <h2>Payouts</h2>
+
+                <div class="header__menu">
+                    <div class="header__menu-block-1">
+                        <button class="regisWindow">New invoice</button>
+                        <button class="header__menu-list"><img src="img/arrow.png" alt="arrow"></button>
+                    </div>
+                    <div class="header__menu-block-2">
+                        <button>Drafts</button>
+                        <button>Customers</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <!-- MIN AMOUNT -->
+        <section class="min-amount">
+            <div class="container">
+                <div class="min-amount__block">
+                    <table class="min-amount__table">
+                        <thead>
+                            <tr>
+                                <th>ACCOUNT NUMBER</th>
+                                <th>CURRENCY</th>
+                                <th>MIN SETTLEMENT AMOUNT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DSF1587FG546JQV45</td>
+                                <td class="min-amount__currency">EUR</td>
+                                <td>1000.0</td>
+                                <td class="min-amount__status">ACTIVE</td>
+                            </tr>
+                            <tr>
+                                <td>DSF1587FG546JQV45</td>
+                                <td class="min-amount__currency">EUR</td>
+                                <td>1000.0</td>
+                                <td class="min-amount__status">ACTIVE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+    <!-- ADD BLOCK -->
+        <section class="add-block">
+            <div class="container">
+                <button class="add-block__btn">
+                    <div><span>Add new payout</span></div>
+                    <div></div>
+                </button>
+                
+                <div class="add-block__arrow-block">
+                    <div class="add-block__arrow-text">Add your bank details</div>
+                    <div class="add-block__arrow">
+                        <img src="img/arrow2.png" alt="arrow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- SETTLEMENT-->
+        <section class="settlement">
+            <div class="container">
+                <h2>Settlement history</h2>
+
+                <div class="settlement__block">
+                    <table class="settlement__table">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>SETTLEMENT ID</th>
+                                <th>ACCOUNT</th>
+                                <th>SETTLED</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date">12.09.2018 14.38</td>
+                                <td class="settlementId"><a href="#">DSF1587FG546JQV45</a></td>
+                                <td class="account">Insertion Order 2...</td>
+                                <td class="settled">3.122686 EUR</td>
+                                <td class="status">Sent</td>
+                            </tr>
+
+                            <tr>
+                                <td class="date"><img clase="shape" src="img/shape.png" alt="shape"></td>
+                                <td class="settlementId"><a href="#">DSF1587FG546JQV45</a></td>
+                                <td class="account"><img clase="shape" src="img/shape.png" alt="shape"></td>
+                                <td class="settled">3.122686 EUR</td>
+                                <td class="status">Sent</td>
+                            </tr>
+
+                            <tr>
+                                <td class="date">12.09.2018 14.38</td>
+                                <td class="settlementId"><a href="#">DSF1587FG546JQV45</a></td>
+                                <td class="account">Insertion Order 2...</td>
+                                <td class="settled">3.122686 EUR</td>
+                                <td class="status">Sent</td>
+                            </tr>
+
+                            <tr>
+                                <td class="date">12.09.2018 14.38</td>
+                                <td class="settlementId"><a href="#">DSF1587FG546JQV45</a></td>
+                                <td class="account">Insertion Order 2...</td>
+                                <td class="settled"><img clase="shape" src="img/shape.png" alt="shape"></td>
+                                <td class="status">Sent</td>
+                            </tr>
+
+                            <tr>
+                                <td class="date">12.09.2018 14.38</td>
+                                <td class="settlementId"><a href="#">DSF1587FG546JQV45</a></td>
+                                <td class="account">Insertion Order 2...</td>
+                                <td class="settled">3.122686 EUR</td>
+                                <td class="status">Sent</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                
+                <ul class="numbering">
+                    <li><button>1</button></li>
+                    <li><button>2</button></li>
+                    <li class="numbering__item-choise">
+                        <button>3</button>
+                    </li>
+                    <li><button>4</button></li>
+                    <li><button>3</button></li>
+                </ul>
+                
+            </div>
+        </section>
+    </div>
+    
+<!-- FOOTER -->
+   <footer class="footer">
+       <div class="container">
+           <a class="footer__btn" href="#">Bitcointalk</a>
+           
+           <div class="footer__block">
+               <div class="footer__links">
+                   <a href="#" class="footer__link">Legal information</a>
+                   <a href="#" class="footer__link">Privacy Policy</a>
+                   <a href="#" class="footer__link">Contacts</a>
+                   <a href="#" class="footer__link">Terms of Use</a>
+               </div>
+               <div class="footer__socials">
+                   <a href="#" class="footer__social"><img src="img/fb.png" alt="fb"></a>
+                   <a href="#" class="footer__social"><img src="img/tw.png" alt="tw"></a>
+               </div>
+           </div>
+       </div>
+   </footer>
+   
+<!-- NEW INVOICE-->
+   <section class="newInvoice">
+       <div class="newInvoice__block">
+          
+           <div class="container">
+                <!--newInvoice__block-1-->
+               <div class="newInvoice__block-1">
+                   <div class="newInvoice__line">
+                       <h2>New Invoice</h2>
+                       <div class="newInvoice__close">Cancel</div>
+                   </div>
+                   <div class="newInvoice__line">
+                       <form class="newInvoice__form">
+                           <div class="newInvoice__line">
+                               <div class="inputFile">
+                                   <input type="file" id="file" name="file">
+                                   <label for="file" class="labelForFile">
+                                       <span>Add your logo</span>
+                                       <div id="output"></div>
+                                   </label>
+                               </div>
+                               <div class="newInvoice__info">
+                                   <div class="newInvoice__info-block">
+                                       <p>BLACKMOON FG LTD</p>
+                                       <p>07534902292</p>
+                                   </div>
+                                   <div class="newInvoice__info-block">
+                                       <p>180 Tottenham Cour Road</p>
+                                       <p>London, london</p>
+                                       <p>W1T 7PD</p>
+                                       <p>United Kindom</p>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line">
+                               <div>
+                                   <input class="newInvoice__line-title" value="Invoice">
+                               </div>
+                               
+                               <div>
+                                   <div class="newInvoice__line-block">
+                                       <div class="block1 customerFields">
+                                           <div class="addCustomerField">
+                                               <input type="text" value="Bill To">
+                                               <button class="block1__field block1__field-1">
+                                                   <div>Choose <span>a customer</span></div>
+                                               </button>
+                                               <div class="addCustomer">+Add</div>
+                                           </div>
+                                       </div>
+                                       <div class="block1">
+                                           <input type="text" name="invoice1" value="Reference">
+                                           <div class="block1__field">
+                                               <input type="text">
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="newInvoice__line-block">
+                                       <div class="block2">
+                                           <div class="block2__number">
+                                               <div>#</div>
+                                               <input type="text" name="number">
+                                           </div>
+                                       </div>
+                                       <div class="block2">
+                                          <div class="block2__date">
+<!--                                               <input type="date" name="date" class="block2-date">-->
+                                                <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                                                    <input class="form-control" type="text" name="date" readonly>
+                                                    <span class="input-group-addon"></span>
+                                                </div>
+                                           </div>
+                                           <div class="block2__date-text">Date</div>
+                                       </div>
+                                       <div class="block2">
+                                          <div class="block2__due">
+<!--                                               <input type="date" name="dueDate" class="block2-dueDate">-->
+                                                <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
+                                                    <input class="form-control" type="text" name="dueDate" readonly>
+                                                    <span class="input-group-addon"></span>
+                                                </div>
+                                           </div>
+                                           <div class="block2__due-text">Due Date</div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                            <!-- table -->
+                           <div class="newInvoice__line">
+                               <table class="invoice__table">
+                                   <thead>
+                                       <tr>
+                                           <th><input type="text" value="Item" name="item"></th>
+                                           <th><input type="text" value="Quantity" name="quantity"></th>
+                                           <th>Rate</th>
+                                           <th>Amount</th>
+                                           <th class="closeTh"></th>
+                                       </tr>
+                                   </thead>
+                                   <tbody class="invoice__table-body">
+                                       <tr>
+                                           <td>
+                                               <div class="invoice__table-block">
+                                                   <input type="text" placeholder="Description of service or product...">
+                                               </div>
+                                           </td>
+                                           <td>
+                                               <div class="invoice__table-block">
+                                                   <input type="text" value="1">
+                                               </div>
+                                           </td>
+                                           <td>
+                                               <div class="invoice__table-block">
+                                                   <div class="invoice__table-currency">€</div>
+                                                   <input type="text" value="0">
+                                               </div>
+                                           </td>
+                                           <td>
+                                                <div class="invoice__table-block">
+                                                    <div class="invoice__table-currency">€</div>
+                                                    <input type="text" value="0" readonly name="amount">
+                                                </div>
+                                           </td>
+                                           <td>
+                                               <div class="invoice__table-block closetr-block">
+                                                   <div class="closeTr">
+                                                       <img src="img/close.svg" alt="close">
+                                                   </div>
+                                               </div>
+                                           </td>
+                                       </tr>
+                                   </tbody>
+                               </table>
+                           </div>
+                           
+                           <div class="newInvoice__line">
+                               <div class="addLineBtn">
+                                   <p>+Add a Line</p>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line">
+                               <div class="newInvoice__subtotal">
+                                   <div class="newInvoice__subtotal-text">Subtotal</div>
+                                   <div class="newInvoice__subtotal-currency">€</div>
+                                   <div class="newInvoice__subtotal-price">0</div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line">
+                               <div class="newInvoice__line-sblock">
+                                   
+                               </div>
+                           </div>
+                           
+                            <!-- ADD HIDDEN FIELDS-->
+                           <div class="newInvoice__line newInvoice__line-hiden">
+                               <div class="amountPaid">
+                                   <div class="inline">Amount paid</div>
+                                   <div class="inline amountPaid__field">
+                                       <div class="addon currency-sign">€</div>
+                                       <input type="text" value="0" name="amountPaid" class="inputField">
+                                       <div class="addon percent">%</div>
+                                       <div class="inline arrow-choise"></div>
+                                       <div class="choise-block">
+                                           <input type="radio" value="afn-choise" id="afn-choise" name="choise-amount" checked>
+                                           <label for="afn-choise">Flat(<span class="afn-choise-currency">€</span>)</label>
+                                           <input type="radio" value="percent-choise" id="percent-choise" name="choise-amount">
+                                           <label for="percent-choise">Percent(%)</label>
+                                       </div>
+                                   </div>
+                                   <div class="closeNewField"><img src="img/close.svg" alt="close"></div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line newInvoice__line-hiden">
+                               <div class="tax">
+                                   <div class="inline">Tax</div>
+                                   <div class="inline tax__field">
+                                       <div class="addon currency-sign">€</div>
+                                       <input type="text" value="0" name="amountPaid" class="inputField">
+                                       <div class="addon percent">%</div>
+                                       <div class="inline arrow-choise"></div>
+                                       <div class="choise-block">
+                                           <input type="radio" value="afn-choise" id="afn-choise2" name="choise-amount">
+                                           <label for="afn-choise2">Flat(<span class="afn-choise-currency">€</span>)</label>
+                                           <input type="radio" value="percent-choise" id="percent-choise2" name="choise-amount" checked>
+                                           <label for="percent-choise2">Percent(%)</label>
+                                       </div>
+                                   </div>
+                                   <div class="closeNewField"><img src="img/close.svg" alt="close"></div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line newInvoice__line-hiden">
+                               <div class="discount">
+                                   <div class="inline">Discount</div>
+                                   <div class="inline discount__field">
+                                       <div class="addon currency-sign">€</div>
+                                       <input type="text" value="0" name="amountPaid" class="inputField">
+                                       <div class="addon percent">%</div>
+                                       <div class="inline arrow-choise"></div>
+                                       <div class="choise-block">
+                                           <input type="radio" value="afn-choise" id="afn-choise3" name="choise-amount">
+                                           <label for="afn-choise3">Flat(<span class="afn-choise-currency">€</span>)</label>
+                                           <input type="radio" value="percent-choise" id="percent-choise3" name="choise-amount" checked>
+                                           <label for="percent-choise3">Percent(%)</label>
+                                       </div>
+                                   </div>
+                                   <div class="closeNewField"><img src="img/close.svg" alt="close"></div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line newInvoice__line-hiden">
+                               <div class="paymentFee">
+                                   <div class="inline">Payment fee</div>
+                                   <div class="inline paymentFee__field">
+                                       <div class="addon currency-sign">€</div>
+                                       <input type="text" value="0" name="amountPaid" class="inputField">
+                                       <div class="addon percent">%</div>
+                                       <div class="inline arrow-choise"></div>
+                                       <div class="choise-block">
+                                           <input type="radio" value="afn-choise" id="afn-choise4" name="choise-amount">
+                                           <label for="afn-choise4">Flat(<span class="afn-choise-currency">€</span>)</label>
+                                           <input type="radio" value="percent-choise" id="percent-choise4" name="choise-amount" checked>
+                                           <label for="percent-choise4">Percent(%)</label>
+                                       </div>
+                                   </div>
+                                   <div class="closeNewField"><img src="img/close.svg" alt="close"></div>
+                               </div>
+                           </div>
+                            <!-- end ADD HIDDEN FIELDS-->
+                           
+                           <div class="newInvoice__line">
+                               <div class="newInvoice__addBtnField">
+                                   <div class="newInvoice__line-paid">+Amount paid</div>
+                                   <div class="newInvoice__line-tax">+Tax</div>
+                                   <div class="newInvoice__line-discount">+Discount</div>
+                                   <div class="newInvoice__line-payment">+Payment fee</div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line">
+                               <div class="newInvoice__total">
+                                   <div class="newInvoice__total-text">Total</div>
+                                   <div class="newInvoice__total-currency">€</div>
+                                   <div class="newInvoice__total-price">0</div>
+                               </div>
+                           </div>
+                           
+                           <div class="newInvoice__line textBlock">
+                               <input type="text" name="notesName" class="notesName" value="Notes">
+                               <textarea name="notes" class="textNotes"></textarea>
+                           </div>
+                           
+                            <!-- ADD new -->
+                           <div class="addnew">
+                               <h2>Add new</h2>
+
+                               <div class="addnew__block">
+                                   <div class="addnew__block-1">
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title addnew__block-title2">
+                                               Business or Individual name
+                                           </div>
+                                           <input type="text" class="addnew__block-input">
+                                       </div>
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title">Address</div>
+                                           <textarea class="addnew__block-input addnew__block-text"></textarea>
+                                       </div>
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title">Country</div>
+                                           <select id="sources" class="custom-select sources" placeholder="Chooise">
+                                                <option value="profile">United Kindom</option>
+                                                <option value="word">Russia</option>
+                                                <option value="hashtag">Ukraine</option>
+                                          </select>
+                                       </div>
+                                   </div>
+                                   <div class="addnew__block-2">
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title">Email</div>
+                                           <input type="email" class="addnew__block-input">
+                                       </div>
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title">Phone</div>
+                                           <input type="text" class="addnew__block-input">
+                                       </div>
+                                       <div class="addnew__block-inner">
+                                           <div class="addnew__block-title">VAT No.</div>
+                                           <input type="text" class="addnew__block-input">
+                                       </div>
+                                   </div>
+                               </div>
+                               
+                               <div class="addnew__bottons">
+                                   <button class="addnew__btn addnew__save">Save</button>
+                                   <button class="addnew__btn addnew__cansel">Cansel</button>
+                               </div>
+                           </div>
+                            <!-- end ADD new -->
+                           
+                       </form>
+                   </div>
+               </div>
+               
+                <!--newInvoice__block-2-->
+               <div class="newInvoice__block-2">
+                   <div class="newInvoice__btns">
+                       <button class="newInvoice__btn-first">Save Draft</button>
+                       <button class="newInvoice__btn-first">Preview and sign</button>
+                       <button class="newInvoice__btn-first">Send Invoice</button>
+                       <button class="newInvoice__btn-first">Save as PDF</button>
+                   </div>
+                   <div class="newInvoice__currency">
+                       <div class="newInvoice__currency-title">Choose a currency</div>
+                       <input type="radio" name="chooiseCurrency" id="eur" value="eur" checked>
+                       <label for="eur"> EUR - EURO</label>
+                       <input type="radio" name="chooiseCurrency" id="gbp" value="gbp">
+                       <label for="gbp">GBP - Pound sterling</label>
+                   </div>
+               </div>
+           </div>
+           
+       </div>
+   </section>
+   
+   
+<!-- NEW PAYOUT -->
+   <section class="newPayout">
+       <div class="container">
+           <form method="post" class="newPayout__form">
+               <div class="newPayout__line">
+                    <h2>New Payout</h2>
+                    <div class="newPayout__buttons">
+                        <button class="newPayout__save">Save</button>
+                        <button class="newPayout__cansel">Cancel</button>
+                    </div>
+               </div>
+
+               <div class="newPayout__line newPayout__line-2">
+                  <div class="newPayout__block">
+                        <div class="newPayout__block-field newPayout__currency">
+                           <input type="radio" name="payout-currency" id="eur2" value="eur" checked>
+                           <label for="eur2">EUR</label>
+                           <input type="radio" name="payout-currency" id="gbp2" value="gbp">
+                           <label for="gbp2">GBP</label>
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Client</p>
+                            <input type="text" class="newPayout__block-input">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Street</p>
+                            <input type="text" class="newPayout__block-input">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">City</p>
+                            <input type="text" class="newPayout__block-input">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Country</p>
+                            <input type="text" class="newPayout__block-input">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Bank code (BIC/SWIFT)</p>
+                            <input type="text" class="newPayout__block-input newPayout__block-input-2">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Bank account number (IBAN)</p>
+                            <input type="text" class="newPayout__block-input newPayout__block-input-2">
+                        </div>
+                        <div class="newPayout__block-field">
+                            <p class="newPayout__block-name">Min. settlement amount</p>
+                            <div class="newPayout__block-field-inner">
+                                <input type="text" class="newPayout__block-input newPayout__block-input-2 newPayout__block-input-3">
+                                <div class="newPayout__block-currency"><span>EUR</span></div>
+                            </div>
+                        </div>
+                        <button class="newPayout__block__btn">
+                            <div><span>Add new payout</span></div>
+                            <div></div>
+                        </button>
+                  </div>
+               </div>
+           </form>
+       </div>
+   </section>
+ 
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

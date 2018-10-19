@@ -1,0 +1,349 @@
+.allinvoices {    
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+// ===== allinvoices__block =====
+.allinvoices__block {
+    &:first-child {
+        height: 96px;
+        position: relative;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    &:nth-child(2) {
+        margin: 24px 0 1.875em;
+    }
+}
+
+// ===== allinvoices-search =====
+.allinvoices-search {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 267px;
+    border: 2px solid #bcd7ec;
+    border-radius: 8px;
+    font: 14px $font-geometria-light;
+    color: #2e3e4f;
+    outline: none;
+    padding: 0.85em 2.78em;
+    background: url("../img/search.png") no-repeat;
+    background-position: 11px center;
+    
+    ::-webkit-input-placeholder {
+        font: 14px $font-geometria-light;
+        color: #2e3e4f;
+    }
+    ::-moz-placeholder          {
+        font: 14px $font-geometria-light;
+        color: #2e3e4f;
+    }
+    :-moz-placeholder           {
+        font: 14px $font-geometria-light;
+        color: #2e3e4f;
+    }
+    :-ms-input-placeholder      {
+        font: 14px $font-geometria-light;
+        color: #2e3e4f;
+    }
+}
+
+// ============== TABLE ==============
+//====================================
+
+// ===== recentInvoices__table =====
+.allinvoices__table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th {
+        text-align: left;
+        text-transform: uppercase;
+        font: 1.5em $font-geometria-bold;
+        color: rgba(46, 62, 79, 0.56);
+        padding-bottom: 1em;
+        border-bottom: 1px solid #a2a2a2;
+        padding-right: 10px;
+        
+        &:nth-child(2) {
+//            width: 26%;
+        }
+        
+        &:nth-child(3) {
+            width: 19%;
+        }
+        
+        &:last-child {
+            width: 6%;
+        }
+    }
+    
+    tbody {
+        tr {
+            transition: 0.3s all;
+            
+            &:hover {
+                background: #f5f5f5;
+            }
+        }
+        
+        td {
+            font: 1.125em $font-geometria-bold;
+            color: #2e3e4f;
+            padding: 1em 0;
+            border-bottom: 1px solid $line;
+        }
+    }
+}
+
+// ===== allinvoices__table-btns ====
+.allinvoices__table-btns {
+    button {
+        border: none;
+        outline: none;
+        background: none;
+        width: 20px;
+        height: 20px;
+        
+        &:first-child {
+            margin-right: 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+}
+
+// ===== numbering =====
+.numbering {
+    width: 150px;
+    margin: 0 auto 3.125em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    li {
+        border-radius: 50%;
+    }
+    
+    button {
+        border: none;
+        background: none;
+        line-height: 29px;
+        width: 29px;
+        height: 29px;
+        text-align: center;
+        cursor: pointer;
+        font: 1.125em $font-geometria-bold;
+        color: #2e3e4f;
+        outline: none;
+    }
+}
+
+.numbering__item-choise {
+    background: #ffa900; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffa900 0%, #fa9715 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffa900 0%,#fa9715 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffa900 0%,#fa9715 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa900', endColorstr='#fa9715',GradientType=1 ); /* IE6-9 */
+    box-shadow: 0 4px 13px 0 rgba(255, 174, 0, 0.26);
+    
+    button {
+        color: #fff;
+    }
+}
+
+
+// ===== media =====
+
+@media screen and (max-width: 1475px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 8%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .allinvoices__table {
+        th {
+            font-size: 1em;
+        }
+        
+        td {
+            font: 0.9em $font-geometria;
+        }
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 10%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 12%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .allinvoices__table {
+        td {
+            padding: 3em 0;
+        }
+    }
+    
+    .allinvoices__block {
+        &:first-child {
+            height: auto;
+            padding: 20px 0;
+        }
+    }
+    
+    .allinvoices {    
+        h2 {
+            position: static;
+            top: 0;
+            transform: none;
+            float: none;
+            margin-bottom: 1em;
+        }
+    }
+
+    .allinvoices-search {
+        width: 100%;
+        position: static;
+        top: 0;
+        right: auto;
+        transform: none;
+        display: block;
+    }
+    
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 14%;
+            }
+        }
+    }
+    
+    .allinvoices__table-btns {
+        button {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .allinvoices__table {
+		overflow-x: auto;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 405px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 16%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 18%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .allinvoices__table {
+        th {
+            &:last-child {
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

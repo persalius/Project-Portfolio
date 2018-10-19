@@ -1,0 +1,84 @@
+.min-amount {
+    margin: 5.375em 0 2.4375em;
+}
+
+// ===== money__block =====
+.money__block {
+    padding: 4em 5.125em;
+    padding-bottom: 2.9em;
+}
+
+// ===== money__table =====
+.min-amount__table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th {
+        text-align: left;
+        font: 1.5em $font-geometria-bold;
+        color: rgba(46, 62, 79, 0.56);
+        padding-bottom: 1em;
+        border-bottom: 1px solid $line;
+        
+        &:last-child {
+            text-align: right;
+        }
+    }
+    
+    td {
+        text-transform: uppercase;
+        font: 1.125em $font-geometria-bold;
+        color: #2e3e4f;
+        padding: 1em 0;
+        border-bottom: 1px solid $line;
+        
+        &.min-amount__currency {
+            color: #1c84d9;
+        }
+        
+        &.min-amount__status {
+            color: #87c42e;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+    
+    tbody {
+        tr:last-child td {
+            border: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {    
+    .money__block {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .min-amount__table {
+        th {
+            font-size: 1.2em;
+        }
+    
+        tbody td {
+            font: 1.2em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+.about-crypto {
+    background: url("../img/bg-crypto.jpg") no-repeat center;
+    background-size: cover;
+    padding: 2.75em 0;
+    
+    h3 {
+        margin-bottom: 1.4em;
+    }
+}
+
+// ========== about-crypto__block ==========
+.about-crypto__block {
+    width: 51.35%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2.6em 0 2.0625em;
+}
+
+.about-crypto__text {
+    width: 87%;
+    margin: 0 auto 2.6em;
+    font-family: $font-helvetica-rom;
+    color: $grey2;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.about-crypto__button {
+    display: block;
+    margin: 0 auto;
+    width: 32%;
+    background: $green;
+    transition: 0.3s all;
+    font-family: $font-helvetica-rom;
+    font-size: 0.875em;
+    color: #fff;
+    padding: 0.9em 0;
+    text-align: center;
+    
+    &:hover {
+        background: $green_hover;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about-crypto {
+        padding: 3.5em 0 3.7em;
+    }
+    
+    .about-crypto__block {
+        width: 62%;
+        position: relative;
+        padding-bottom: 5.5em;
+    }
+    
+    .about-crypto__button {
+        width: 100%;
+        font-size: 1.225em;
+        padding: 1.3em 0;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .about-crypto__block {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about-crypto__block {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-crypto {
+        background: url("../img/bg-crypto2.jpg") no-repeat center;
+        background-size: cover;
+        padding: 5em 0 6.25em;
+    }
+    
+    .about-crypto__block {
+        width: 100%;
+        height: auto;
+        padding: 1.5em 0;
+        
+        h3 {
+            font-size: 1.125em;
+            margin-bottom: 1em;
+        }
+        
+        .about-crypto__text {
+            font-size: 0.75em;
+            line-height: 1.5;
+        }
+        
+        .about-crypto__button {
+            padding: 0.8em 0;
+            font-size: 0.875em;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

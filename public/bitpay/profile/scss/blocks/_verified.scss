@@ -1,0 +1,243 @@
+.verified {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 99999999999999;
+    @extend %clearfix;
+    
+    .container {
+	    padding: 2em 0;
+    }
+    
+    h2 {
+        float: left;
+        line-height: 54px;
+    }
+}
+
+// ===== verified__line =====
+.verified__line {
+    margin-bottom: 1.5em;
+    
+    &-2 {
+        padding: 1.75em 1.875em;
+        border: 1px solid #c9c9c9;
+        border-radius: 8px;
+    }
+}
+
+// ===== verified__buttons =====
+.verified__buttons{
+    margin-top: 1.5em;
+    @extend %clearfix;
+    
+    button {
+        width: 150px;
+        height: 54px;
+        float: right;
+        border: none;
+        font-family: $font-geometria-light;
+        outline: none;
+    }
+}
+
+.verified__send {
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 13px 0 rgba(255, 174, 0, 0.26);
+    background: #ffa900; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffa900 0%, #fa9616 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffa900 0%,#fa9616 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffa900 0%,#fa9616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa900', endColorstr='#fa9616',GradientType=1 ); /* IE6-9 */
+}
+
+.verified__cansel {
+    font-size: 24px;
+    color: rgba(46, 62, 79, 0.5);
+    background: none;
+}
+
+
+// ===== verified__title =====
+.verified__title {
+    font: 1.5em $font-geometria-bold;
+    color: #2e3e4f;
+    margin-bottom: 1.5em;
+}
+
+// ===== verified__text =====
+.verified__text {
+    font: 1.125em $font-geometria-light;
+    color: #2e3e4f;
+    
+    &-2 {
+        margin-left: 0.8em;
+    }
+    
+    &-3 {
+        margin-left: 0.8em;
+    }
+}
+
+// ================ Работа с файлами ==============
+// ================================================
+.files-wr input {
+  display: none;
+}
+.files-wr {
+  padding: 20px;
+    padding-left: 0;
+  label {
+    padding: 1em 2em;
+    font-family: $font-geometria-light;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 13px 0 rgba(255, 174, 0, 0.26);
+    background: #ffa900; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffa900 0%, #fa9616 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffa900 0%,#fa9616 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffa900 0%,#fa9616 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa900', endColorstr='#fa9616',GradientType=1 ); /* IE6-9 */
+  }
+
+  .one-file {
+    & ~ .one-file {
+      label {
+        display: none;
+      }
+    }
+    &.error {
+      border: none;
+       .file-name {
+         color: #ca4a17;
+       }
+    }
+  }
+
+  .file-item {
+    position: relative;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    &.hide-btn {
+      display: none;
+    }
+  }
+
+  .file-name {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+  }
+  .btn-del-file {
+    margin-left: 5px;
+//    width: 16px;
+    min-width: 16px;
+//    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+    background-color: #177cca;
+    &:hover, &:focus {
+      background-color: #ca4a17;
+    }
+  }
+}
+
+@media screen and (max-width: 1190px) {
+    .verified {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .verified {
+        .container {
+	        max-width: 80%;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .verified {
+        .container {
+	        max-width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .verified {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .verified {        
+        h2 {
+            float: none;
+        }
+    }
+    
+    .verified__buttons {
+        button {
+            float: none;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .verified__buttons {
+        button {
+            width: 100%;
+        }
+    }
+    
+    .files-wr {
+        padding-right: 0;
+    }
+    
+    .files-wr label {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

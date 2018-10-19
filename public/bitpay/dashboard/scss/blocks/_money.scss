@@ -1,0 +1,137 @@
+.money {
+    margin-bottom: 2.75em;
+}
+
+// ===== money__block =====
+.money__block {
+    padding: 4em 5.125em;
+    padding-bottom: 2.9em;
+    background: url("../img/border1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+// ===== money__table =====
+.money__table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    
+    th {
+        text-align: left;
+        font: 1.5em $font-geometria-bold;
+        color: rgba(46, 62, 79, 0.56);
+        padding-bottom: 1em;
+    }
+    
+    td {
+        text-transform: uppercase;
+        font: 1.5em $font-geometria-bold;
+        color: #2e3e4f;
+        padding: 1em 0;
+    }
+    
+    tbody {
+        td {
+            border-bottom: 1px solid $line;
+        }
+
+        tr:last-child td {
+            border: none;
+        }
+    }
+}
+
+// ===== money__arrow-block =====
+.money__arrow-block {
+    position: absolute;
+    top: 162px;
+    right: 6px;
+}
+
+.money__arrow-text {
+    font: 2.25em $font-swanky;
+    background: linear-gradient(90deg, #ffa900, #fa9616);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 13px rgba(255, 174, 0, 0.26);
+    position: absolute;
+    width: 375px;
+    left: -274px;
+}
+
+@media screen and (max-width: 1550px) {
+    .money__arrow-text {
+        left: -308px;
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .money__arrow-text {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+//    .money__arrow-block {
+//        display: none;
+//    }
+}
+
+@media screen and (max-width: 1190px) {
+    .money__arrow-block {
+        top: 102px;
+    }
+    
+    .money__arrow {
+        width: 42px;
+    }
+    
+    .money__arrow-text {
+        font-size: 2em;
+        width: 315px;
+        top: 48px;
+        left: -257px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .money__arrow-text {
+        width: 280px;
+        left: -237px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .money__arrow-block {
+        display: none;
+    }
+    
+    .money__block {
+        background: none;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .money__table {
+        th {
+            font-size: 1.2em;
+        }
+    
+        tbody td {
+            font: 1.2em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

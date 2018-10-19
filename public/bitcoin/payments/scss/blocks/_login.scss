@@ -1,0 +1,99 @@
+.login {
+    display: none;
+    width: 530px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+    padding: 3.4375em 0 3.875em;
+    z-index: 9999;
+    
+    p:last-of-type {
+        font: 0.875em $font-helvetica-rom;
+        color: $grey2;
+        text-align: center;
+        
+        a {
+            color: $green;
+        }
+    }
+}
+
+.login__title {
+    font: 1.5em $font-helvetica-med;
+    color: $grey2;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.login__form {
+    width: 92%;
+    margin: 0 auto 1.5em;
+    
+    input {
+        display: block;
+        width: 100%;
+        border: 1px solid #f8f7f7;
+        padding: 1em 0.8em;
+        margin-bottom: 1.875em;
+        color: $grey2;
+        outline: none;
+        font-family: $font-helvetica-rom;
+        text-align: center;
+        font-size: 0.875em;
+        
+        &::-webkit-input-placeholder {
+            font-family: $font-helvetica-italic;
+        }
+        &:-ms-input-placeholder { 
+            font-family: $font-helvetica-italic;
+        }
+        &::-ms-input-placeholder {
+            font-family: $font-helvetica-italic;
+        }
+        &::placeholder {
+            font-family: $font-helvetica-italic;
+        } 
+    }
+    
+    input[type=submit] {
+        width: 31%;
+        margin: 0 auto;
+        background: $green;
+        color: #fff;
+        transition: 0.3s all;
+        border: none;
+        cursor: pointer;
+        padding: 0.6em 0;
+        letter-spacing: 1.5px;
+        
+        &:hover {
+            background: $green_hover;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .login {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

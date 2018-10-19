@@ -1,0 +1,204 @@
+.consultation {
+    padding: 2.5em 0 2em;
+    background: #28a845;
+    background: -moz-linear-gradient(left, #28a845 0%, #20c997 100%);
+    background: -webkit-linear-gradient(left, #28a845 0%,#20c997 100%);
+    background: linear-gradient(to right, #28a845 0%,#20c997 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28a845', endColorstr='#20c997',GradientType=1 );
+    
+    h2 {
+        font-size: 2.25em;
+        color: #fff;
+        letter-spacing: 3px;
+        margin-bottom: 0.4em;
+    }
+    
+    .consultation__desc {
+        font: 1.125em $font-helvetica-rom;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1.3px;
+        margin-bottom: 2.3em;
+    }
+}
+
+
+.consultation__form {
+    @extend %clearfix;
+    
+    input {
+        width: 49%;
+        display: block;
+        float: left;
+        border: none;
+        font-family: $font-helvetica-rom;
+        letter-spacing: 1px;
+        color: $grey;
+        padding: 1.125em;
+        outline: none;
+        margin-bottom: 2.3125em; 
+        
+        &:first-child {
+            margin-right: 2%;
+        }
+        
+        &::-webkit-input-placeholder {
+            font-family: $font-helvetica-italic;
+            letter-spacing: 1px;
+            color: $grey;
+        }
+        &:-ms-input-placeholder { 
+            font-family: $font-helvetica-italic;
+            letter-spacing: 1px;
+            color: $grey;
+        }
+        &::-ms-input-placeholder {
+            font-family: $font-helvetica-italic;
+            letter-spacing: 1px;
+            color: $grey;
+        }
+        &::placeholder {
+            font-family: $font-helvetica-italic;
+            letter-spacing: 1px;
+            color: $grey;
+        }
+    }
+    
+    .consultation__btn {
+        float: none;
+        width: 25.7%;
+        margin: 0 auto;
+        background: none;
+        border: 3px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s all;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .consultation {
+        padding: 2.3em 0 1em;
+        
+        h2 {
+            font-size: 1.875em;
+            letter-spacing: 5px;
+            margin-bottom: 1.1em;
+        }
+        
+        .consultation__desc {
+            display: none;
+        }
+    }
+    
+    .consultation__form {
+        input {
+            width: 90%;
+            float: none;
+            margin: 0 auto 1.2em !important;
+            text-align: center;
+            padding: 1.12em;
+            font-size: 1.125em;
+
+            &::-webkit-input-placeholder {
+                font-family: $font-helvetica-rom;
+            }
+            &:-ms-input-placeholder { 
+                font-family: $font-helvetica-rom;
+            }
+            &::-ms-input-placeholder {
+                font-family: $font-helvetica-rom;
+            }
+            &::placeholder {
+                font-family: $font-helvetica-rom;
+            }
+            
+            &:nth-child(2) {
+                margin-bottom: 1.7em !important;
+            }
+        }
+        
+        .consultation__btn {
+            width: 27%;
+            padding: 0.7em 0;
+            border: 2px solid #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .consultation {
+        padding-top: 1.5em;
+        
+        h2 {
+            font-size: 1.125em;
+            margin-bottom: 1.3em;
+        }
+        
+        .consultation__desc {
+            display: block;
+            font-size: 0.75em;
+            line-height: 1.5;
+        }
+    }
+    
+    .consultation__form {
+        input {
+            width: 100%;
+            font-size: 0.875em;
+            padding: 0.9em;
+            
+            &:first-child {
+                margin-bottom: 1.1em !important;
+            }
+            
+            &:nth-child(2) {
+                margin-bottom: 1.1em !important;
+            }
+        }
+        
+        .consultation__btn {
+            width: 100%;
+            font-size: 0.875em;
+            
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

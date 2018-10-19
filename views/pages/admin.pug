@@ -116,6 +116,7 @@ block content
                         form#formForWorks-admin(method="POST" enctype="multipart/form-data" action="/admin/upload")
                             h3.tab_item-direction Добавить работу
                             input(type="text" placeholder="Название проекта" class="formAdmin__input adminNameProject" name="name")
+                            input(type="text" placeholder="Ссылка на проект" class="formAdmin__input adminLinkProject" name="link")
                             input(type="text" placeholder="Технологии" class="formAdmin__input adminTechProject" name="technologies")
                             input(type="file" class="formAdmin__file" id="formAdmin__file" name="photo" accept="image/*")
                             label(for="formAdmin__file") Загрузить картинку

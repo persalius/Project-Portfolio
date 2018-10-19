@@ -23,26 +23,20 @@ block content
         section.section.slider
             .slider__desc
                 .slider__desc-info
-                    .slider__desc-title
-                        .block-title Сайт школы онлайн образования
-                    .slider__desc-skills
-                        | HTML, css, javascript
-                    .slider__desc-btn
-                        a(href="#").btn Посмотреть сайт
+                    each index in items
+                        div
+                            .slider__desc-title
+                                .block-title= index.name
+                            .slider__desc-skills= index.technologies
+                            .slider__desc-btn
+                                a(href= `${index.link}` target="_blank").btn Посмотреть сайт
             .slider__display
-                .slider__display-img
-                    img(src="../img/1.png" alt="").slider__display-pic
-                .slider__btns
-                    a(href="#").slider__btn.slider__btn_left
-                        img(src="../img/down.jpg" alt="")
-                    a(href="#").slider__btn.slider__btn_right
-                        img(src="../img/up.jpg" alt="")
-                        
-        ul
-            each index in items
-                figure
-                    img(src= `${index.picture}`)
-                    figcaption= index.name
+                .scroll
+                    each index in items
+                        div
+                            img(src= `${index.picture}`)
+        
+        
     
                     
         include ../parts/reviews

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat/montserrat.eot');
+    src: url('../fonts/montserrat/montserrat.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/montserrat.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat.woff') format('woff'),
+         url('../fonts/montserrat/montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//@font-face {
+//    font-family: 'helveticaneuecyr';
+//    src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr.eot');
+//    src: url('../fonts/HelveticaNeueCyr/helveticaneuecyr.eot?#iefix') format('embedded-opentype'),
+//         url('../fonts/HelveticaNeueCyr/helveticaneuecyr.woff2') format('woff2'),
+//         url('../fonts/HelveticaNeueCyr/helveticaneuecyr.woff') format('woff'),
+//         url('../fonts/HelveticaNeueCyr/helveticaneuecyr.ttf') format('truetype');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+
+@font-face {
+    font-family: 'helveticaneuecyr-medium';
+    src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf');
+}
+
+@font-face {
+    font-family: 'helveticaneuecyr-roman';
+    src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf');
+}
+
+@font-face {
+    font-family: 'helveticaneuecyr-thin';
+    src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf');
+}
+
+@font-face {
+    font-family: 'helveticaneuecyr-italic';
+    src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Italic.otf');
+}
+
+@font-face {
+    font-family: 'helveticaneuecyr-light';
+    src: url('../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf');
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/openSans/OpenSans-Regular.ttf');
+}

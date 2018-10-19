@@ -1,0 +1,177 @@
+.payment {
+    height: 24.125em;
+    background: url("../img/payment_bg.png") no-repeat center;
+    background-size: cover;
+    padding-top: 6em;
+    
+    .container {
+        position: relative;
+        height: 100%;
+        @extend %clearfix;
+    }
+}
+
+
+// ========== payment__mobile ==========
+.payment__mobile {
+    width: 27.56%;
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+}
+
+// ========== payment__block ==========
+.payment__block {
+    width: 66%;
+    float: right;
+    
+    h2 {
+        text-align: left;
+        margin-bottom: 1.5em;
+    }
+    
+    .payment__desc {
+        font: 1.125em $font-helvetica-rom;
+        color: $grey2;
+        letter-spacing: 1px;
+        margin-bottom: 2.9em;
+    }
+    
+    .payment__btn {
+        width: 35%;
+        display: block;
+        background: $green;
+        color: #fff;
+        font-family: $font-helvetica-rom;
+        letter-spacing: 1px;
+        padding: 1em 0;
+        transition: 0.3s all;
+        text-align: center;
+        
+        &:hover {
+            background: $green_hover;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .payment {
+        padding-top: 5.5em;
+        height: 22.9em;
+        
+        h2 {
+            margin-bottom: 2.3em;
+            letter-spacing: 1.3px;
+        }
+    }
+    
+    .payment__block .payment__desc {
+        font-size: 0.875em;
+        margin-bottom: 3.9em;
+        line-height: 1.5;
+    }
+    
+    .payment__mobile {
+        bottom: 0;
+        width: 23.2%;
+        left: 8px;
+    }
+    
+    .payment__block {
+        width: 64%;
+    }
+    
+    .payment__block .payment__btn {
+        width: 43%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .payment {
+        padding: 3.5em 0 2.5em;
+        height: auto;
+    }
+    
+    .payment__mobile {
+        display: none;
+    }
+    
+    .payment__block {
+        width: 100%;
+        float: none;
+        
+        h2 {
+            text-align: center;
+            letter-spacing: 0.2px;
+            margin-bottom: 1em;
+        }
+        
+        .payment__desc {
+            text-align: center;
+            letter-spacing: 0.6px;
+            margin-bottom: 2.5em;
+        }
+        
+        .payment__btn {
+            width: 100%;
+            font-size: 0.875em;
+            padding: 0.8em 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .payment {
+        padding: 3.5em 0 2.5em;
+        height: auto;
+    }
+    
+    .payment__block {
+        width: 100%;
+        float: none;
+        
+        h2 {
+            text-align: center;
+            letter-spacing: 0.2px;
+            margin-bottom: 1em;
+        }
+        
+        .payment__desc {
+            text-align: center;
+            font-size: 0.75em;
+            letter-spacing: 0.6px;
+            margin-bottom: 2.5em;
+        }
+        
+        .payment__btn {
+            width: 100%;
+            font-size: 0.875em;
+            padding: 0.8em 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

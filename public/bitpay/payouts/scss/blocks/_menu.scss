@@ -1,0 +1,141 @@
+.menu {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background: $color-blue2;
+    padding-top: 1.875em;
+    overflow: auto;
+}
+
+// ===== menu__logo =====
+.menu__logo {
+    width: 100%;
+    height: 60px;
+    margin-top: 1.125em;
+    margin-bottom: 1.125em;
+}
+
+// ===== name, company =====
+.menu__name {
+    text-align: center;
+    font: 15px $font-geometria;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.menu__compay {
+    text-align: center;
+    font: 16px $font-geometria;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2.3em;
+}
+
+// ===== menu__nav =====
+.menu__nav li {
+    
+    a {
+        background-position: 8px center;
+    }
+}
+
+.item {
+    &-dashboard {
+        background: url("../img/question.png") no-repeat;
+        background-position: 9px center;
+    }
+    
+    &-customers {
+        background: url("../img/customers.png") no-repeat;
+        background-position: 9px center;
+    }
+    
+    &-invoices {
+        background: url("../img/pen.png") no-repeat;
+        background-position: 9px center;
+    }
+    
+    &-payouts {
+        background: url("../img/money.png") no-repeat;
+        background-position: 9px center;
+        box-shadow: inset 0 0 13px 0 rgba(0, 0, 0, 0.23);
+    }
+    
+    &-settings {
+        background: url("../img/settings.png") no-repeat;
+        background-position: 9px center;
+    }
+    
+    &-profile {
+        background: url("../img/profile.png") no-repeat;
+        background-position: 9px center;
+    }
+    
+    &-logout {
+        background: url("../img/logout.png") no-repeat;
+        background-position: 9px center;
+    }
+}
+
+.menu__link {
+    font: 17px $font-geometria;
+    color: #fff;
+    padding: 1em 0;
+    padding-left: 2em;
+    display: block;
+    transition: 0.3s all;
+    
+    &:hover {
+        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+	    left: -180px;
+    }
+    
+    .menu__nav li {
+        margin-bottom: 1em;
+    }
+    
+    .menu__link {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .menu__name, .menu__compay {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

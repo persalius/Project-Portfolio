@@ -1,0 +1,57 @@
+//variables
+//==============================
+
+//color
+$green: #28a745;
+$green_hover: #008227;
+$grey: #343434;
+$grey2: #797979;
+$dark: #272727;
+$dark2: #222222;
+
+//fonts
+$font-montserrat: 'montserrat', sans-serif;
+$font-helvetica-med: "helveticaneuecyr-medium", sans-serif;
+$font-helvetica-rom: "helveticaneuecyr-roman", sans-serif;
+$font-helvetica-thin: "helveticaneuecyr-thin", sans-serif;
+$font-helvetica-italic: "helveticaneuecyr-italic", sans-serif;
+$font-helvetica-light: "helveticaneuecyr-light", sans-serif;
+$font-openSans: "OpenSans-Regular", sans-serif;
+
+//layout setups
+//==============================
+@import "layout/_normalize.scss";
+@import "layout/_setups.scss";
+@import "layout/_fonts.scss";
+
+//mixins
+//==============================
+@import "helpers/_mixins.scss";
+
+//blocks
+//==============================
+@import "blocks/_main.scss";
+@import "blocks/_page-info.scss";
+@import "blocks/_page-footer.scss";
+@import "blocks/_callback.scss";
+@import "blocks/_login.scss";
+@import "blocks/_hidden-menu.scss";
+@import "blocks/_programBenefits.scss";
+@import "blocks/_goRegistered.scss";
+@import "blocks/_startEarning.scss";
+@import "blocks/_manual.scss";
+@import "blocks/_structure.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+

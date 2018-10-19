@@ -47,7 +47,8 @@
     "nodemailer": "^4.6.8",
     "normalize.css": "^8.0.0",
     "pug": "^2.0.3",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "slick-carousel": "^1.8.1"
   },
   "engines": {
     "node": "8.12.0"

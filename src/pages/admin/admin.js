@@ -22,6 +22,7 @@ function prepareSendFile(e) {
     let file = document.querySelector("#formAdmin__file").files[0];
     let name = document.querySelector(".adminNameProject").value;
     let technologies = document.querySelector(".adminTechProject").value;
+    let link = document.querySelector(".adminLinkProject").value;
     
     if (!file) {
         adminStatus.style.display = "block";
@@ -31,6 +32,7 @@ function prepareSendFile(e) {
     formData.append("photo", file, file.name);
     formData.append("name", name);
     formData.append("technologies", technologies);
+    formData.append("link", link);
     
     adminStatus.style.display = "block";
     resultContainer.innerHTML = "Uploading...";

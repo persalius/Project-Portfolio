@@ -1,0 +1,59 @@
+//variables
+//==============================
+
+//color
+$green: #28a745;
+$green_hover: #008227;
+$grey: #343434;
+$grey2: #797979;
+$dark: #272727;
+$dark2: #222222;
+
+//fonts
+$font-montserrat: 'montserrat', sans-serif;
+//$font-helveticaneuecyr: "helveticaneuecyr", sans-serif;
+$font-helvetica-med: "helveticaneuecyr-medium", sans-serif;
+$font-helvetica-rom: "helveticaneuecyr-roman", sans-serif;
+$font-helvetica-thin: "helveticaneuecyr-thin", sans-serif;
+$font-helvetica-italic: "helveticaneuecyr-italic", sans-serif;
+$font-helvetica-light: "helveticaneuecyr-light", sans-serif;
+$font-openSans: "OpenSans-Regular", sans-serif;
+
+//layout setups
+//==============================
+@import "layout/_normalize.scss";
+@import "layout/_setups.scss";
+@import "layout/_fonts.scss";
+
+//mixins
+//==============================
+@import "helpers/_mixins.scss";
+
+//blocks
+//==============================
+@import "blocks/_main.scss";
+@import "blocks/_about-us.scss";
+@import "blocks/_about-crypto.scss";
+@import "blocks/_investments.scss";
+@import "blocks/_product.scss";
+@import "blocks/_articles.scss";
+@import "blocks/_page-info.scss";
+@import "blocks/_page-footer.scss";
+@import "blocks/_callback.scss";
+@import "blocks/_login.scss";
+@import "blocks/_hidden-menu.scss";
+@import "blocks/_hidden-form-registration.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
