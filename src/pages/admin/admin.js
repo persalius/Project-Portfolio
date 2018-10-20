@@ -9,9 +9,11 @@ import {checkSymbolinFild} from "../../components/checkSymbolinFild";
 
 const formUpload = document.querySelector("#formForWorks-admin");
 const formBlog = document.querySelector("#formForblog-admin");
+const formAbout = document.querySelector("#formForAboutMe-admin");
 
 formUpload.addEventListener("submit", prepareSendFile);
 formBlog.addEventListener("submit", prepareSendPost);
+formAbout.addEventListener("submit", prepareSendSkills);
 
 // Отправка изображений на сервер
 function prepareSendFile(e) {
@@ -52,6 +54,26 @@ function prepareSendPost(e) {
         text: formBlog.text.value
     };
     prepareSend("/admin/addpost", formBlog, data);
+}
+
+// Сохранение скилов
+function prepareSendSkills(e) {
+    e.preventDefault();
+    let data = {
+        javascript: formAbout.javascript.value,
+        jquery: formAbout.jquery.value,
+        html: formAbout.html.value,
+        css: formAbout.css.value,
+        scss: formAbout.scss.value,
+        pug: formAbout.pug.value,
+        git: formAbout.git.value,
+        webpack: formAbout.webpack.value,
+        node: formAbout.node.value,
+        mongo: formAbout.mongo.value,
+        illustrator: formAbout.illustrator.value,
+        photoshop: formAbout.photoshop.value
+    };
+    prepareSend("/admin/skills", formAbout, data);
 }
 
 

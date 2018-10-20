@@ -404,10 +404,12 @@ img {
 
 .about__pic {
   margin-bottom: 1.185em;
-  text-align: center; }
+  text-align: center;
+  height: 25em; }
   .about__pic img {
     display: inline-block;
-    max-width: 100%; }
+    max-width: 100%;
+    max-height: 100%; }
 
 .about__col-title {
   text-align: center; }
@@ -485,6 +487,10 @@ img {
     height: 4.125em; }
   .about-head__triangle_right {
     fill: #efeee9; } }
+
+@media screen and (max-width: 500px) {
+  .about__pic {
+    height: 14em; } }
 
 @media screen and (max-width: 480px) {
   .about-head__triangle {
@@ -2274,6 +2280,36 @@ input[type=radio]:checked + label:before {
     left: 2%; }
   .carousel__button-right {
     right: 2%; } }
+
+.skill-level {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 2.375em;
+  padding: 0; }
+  .skill-level:last-child {
+    margin-right: 0; }
+  .skill-level .chart {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    color: #10c1a8;
+    display: inline-block;
+    font-size: 13px;
+    text-align: center;
+    position: relative; }
+    .skill-level .chart sup {
+      font-size: .75rem;
+      font-weight: normal; }
+    .skill-level .chart canvas {
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+.skill-level__name {
+  font-size: 16px;
+  color: #10c1a8;
+  text-align: center;
+  margin-top: 0.5em; }
 /* Slider */
 .slick-slider
 {

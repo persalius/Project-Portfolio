@@ -103,6 +103,38 @@ router.post("/addpost", isAdmin, (req, res) => {
 
 module.exports = router;
 
+// ========== загрузка скилов ==========
+router.post("/skills", isAdmin, (req, res) => {
+    //требуем наличия заголовка, даты и текста
+    if (!req.body) {
+        return res.json({status: "Укажите данные!"});
+    }
+    
+    //создаем новый список скилов и передаем в него поля из формы
+    const Model = mongoose.model("skills");
+    let item = new Model({javascript: req.body.javascript, jquery: req.body.jquery, html: req.body.html, css: req.body.css, scss: req.body.scss, pug: req.body.pug, git: req.body.git, webpack: req.body.webpack, node: req.body.node, mongo: req.body.mongo, illustrator: req.body.illustrator, photoshop: req.body.photoshop});
+    
+    item.save().then(
+        //обрабатываем и отправляем ответ в браузер
+        i => {
+            return res.json({status: "Запись успешно добавлена"});
+        }, e => {
+            //если есть ошибки, то получаем их список и так же передаем в шаблон
+            const error = Object
+                .keys(e.errors)
+                .map(key => e.errors[key].message)
+                .join(", ");
+            
+            //обрабатываем и отправляем ответ в бразуер
+            res.json({
+                status: "При добавлении записи произошла ошибка: " + error
+            });
+        }
+    )
+});
+
+module.exports = router;
+
 
 
 

@@ -1,0 +1,46 @@
+$primary-color: #4e7390;
+
+$bg-top: #ebedf8;
+$bg-bottom: #d6d8e2;
+
+$small-color: lighten($primary-color, 20%);
+
+.skill-level {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 2.375em;
+    padding: 0;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+  
+    .chart {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        color: #10c1a8;
+        display: inline-block;
+        font-size: 13px;
+        text-align: center;
+        position: relative;
+    
+        sup {
+            font-size: .75rem;
+            font-weight: normal;
+        }
+        
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.skill-level__name {
+    font-size: 16px;
+    color: #10c1a8;
+    text-align: center;
+    margin-top: 0.5em;
+}

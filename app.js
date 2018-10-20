@@ -33,6 +33,7 @@ require("./models/db-close");
 require("./models/blog");
 require("./models/pic");
 require("./models/user");
+require("./models/skills");
 
 // ========== view engine setup ==========
 app.set("view engine", "pug");

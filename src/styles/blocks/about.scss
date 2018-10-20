@@ -33,10 +33,12 @@
 .about__pic {
 	margin-bottom: 1.185em;
 	text-align: center;
+    height: 25em;
 
 	img {
 		display: inline-block;
 		max-width: 100%;
+        max-height: 100%;
 	}
 }
 
@@ -134,6 +136,12 @@
     
     .about-head__triangle_right {
         fill: $white;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about__pic {
+        height: 14em;
     }
 }
 

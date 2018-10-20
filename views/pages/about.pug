@@ -25,7 +25,7 @@ block content
                             | Обо мне
                     .about__info
                         .about__pic
-                            img(src="../img/about.jpg" alt="").about__pic-img
+                            img(src="../img/about.png" alt="").about__pic-img
                         .about__title
                             .block-title Кто я
                         .block-text
@@ -46,7 +46,7 @@ block content
                         .skills__title
                             .block-title Чем я могу быть вам полезен
                         .skills__text
-                            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать задачи на Backend. Но давайте по порядку.
                         ul.skills-group
                             - var skills = [{"Frondend": ["JavaScript", "jQuery", "HTML", "CSS", "SCSS", "PUG"]},{"Backend": ["node.js", "Mongo.db"]}, {"WorkFlow": ["Webpack", "Git"]}, {"Design": ["Illustrator", "Photoshop"]}]
                             each skill in skills
@@ -57,11 +57,15 @@ block content
                                             ul.skills-list
                                                 each skillTitle in skillsArray
                                                     li.skills-list__item
-                                                        .skill
-                                                            svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
-                                                                circle(cx="50" cy="50" r="40").skills__circle-under
-                                                                circle(cx="50" cy="50" r="40").skills__circle-above
-                                                            .skill__title= skillTitle
+                                                        each index in items
+                                                            -
+                                                                var skill = skillTitle.split(".")[0].toLowerCase();
+                                                            .skill-level
+                                                                div.chart(data-percent= `${index[skill]}`)
+                                                                    span.percent= index[skill]
+                                                                    span %
+                                                                .skill-level__name= skillTitle
+        
         include ../parts/map
         include ../parts/footer
         
