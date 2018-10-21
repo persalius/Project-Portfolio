@@ -1,7 +1,8 @@
 export default (function() {
     let state = true;
     
-    $('.humburger__button').on('click', function() {
+    function animateMenu() {
+//        $(this).unbind('click');
         $(this).closest('.humburger').toggleClass('menu_state_open');
         $(".humburger__menu").toggleClass('menu_state_open');
         
@@ -19,6 +20,8 @@ export default (function() {
         }
         
         state = !state;
-    });
+    };
+    
+    $('.humburger__button').bind('click', animateMenu);
     
 })();
